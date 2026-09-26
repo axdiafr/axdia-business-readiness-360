@@ -1,0 +1,24 @@
+{
+  "evaluations": [
+    {
+      "control_id": "BR360-PROD-005",
+      "status": "PASS",
+      "evidence_level": "E4_REAL_WORLD",
+      "summary": "Customer feedback is collected after activation and is linked to product decisions.",
+      "source": "customer-feedback-review",
+      "evidence_type": "REAL_WORLD_OBSERVATION",
+      "authority": 0.9,
+      "confidence": 0.9
+    },
+    {
+      "control_id": "BR360-DATA-003",
+      "status": "PASS",
+      "evidence_level": "E3_RUNTIME",
+      "summary": "Restore drill completed successfully in the isolated recovery environment.",
+      "source": "restore-drill-2026-09",
+      "evidence_type": "RUNTIME_TEST",
+      "authority": 0.95,
+      "confidence": 0.95
+    }
+  ]
+}

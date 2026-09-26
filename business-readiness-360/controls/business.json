@@ -1,0 +1,210 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "business",
+  "controls": [
+    {
+      "id": "BR360-BIZ-001",
+      "title": "Value proposition and target customer are evidence-backed",
+      "domain": "business",
+      "description": "Require customer/user evidence for material market claims.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "USER_EVIDENCE"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Require customer/user evidence for material market claims."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Value proposition and target customer are evidence-backed?"
+      ],
+      "pass_condition": "PASS when USER_EVIDENCE evidence directly demonstrates \"Value proposition and target customer are evidence-backed\" for the applicable scope; the review/test addresses this check: Require customer/user evidence for material market claims; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Value proposition and target customer are evidence-backed\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require customer/user evidence for material market claims.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Value proposition and target customer are evidence-backed\", the required capability is materially absent, or the check cannot be demonstrated after review: Require customer/user evidence for material market claims.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-TWENTY",
+        "REF-N8N"
+      ]
+    },
+    {
+      "id": "BR360-BIZ-002",
+      "title": "Pricing and packaging map to delivered value and cost",
+      "domain": "business",
+      "description": "Review willingness-to-pay evidence, cost drivers and plan boundaries.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Review willingness-to-pay evidence, cost drivers and plan boundaries."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Pricing and packaging map to delivered value and cost?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Pricing and packaging map to delivered value and cost\" for the applicable scope; the review/test addresses this check: Review willingness-to-pay evidence, cost drivers and plan boundaries; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Pricing and packaging map to delivered value and cost\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Review willingness-to-pay evidence, cost drivers and plan boundaries.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Pricing and packaging map to delivered value and cost\", the required capability is materially absent, or the check cannot be demonstrated after review: Review willingness-to-pay evidence, cost drivers and plan boundaries.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-TWENTY",
+        "REF-N8N"
+      ]
+    },
+    {
+      "id": "BR360-BIZ-003",
+      "title": "Acquisition path is defined and measurable",
+      "domain": "business",
+      "description": "Identify channels and real acquisition evidence.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Identify channels and real acquisition evidence."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Acquisition path is defined and measurable?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Acquisition path is defined and measurable\" for the applicable scope; the review/test addresses this check: Identify channels and real acquisition evidence; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Acquisition path is defined and measurable\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Identify channels and real acquisition evidence.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Acquisition path is defined and measurable\", the required capability is materially absent, or the check cannot be demonstrated after review: Identify channels and real acquisition evidence.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-TWENTY",
+        "REF-N8N"
+      ]
+    },
+    {
+      "id": "BR360-BIZ-004",
+      "title": "Support burden and gross-margin drivers are measured",
+      "domain": "business",
+      "description": "Include support/infra/provider costs, not revenue alone.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Include support/infra/provider costs, not revenue alone."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Support burden and gross-margin drivers are measured?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Support burden and gross-margin drivers are measured\" for the applicable scope; the review/test addresses this check: Include support/infra/provider costs, not revenue alone; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Support burden and gross-margin drivers are measured\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Include support/infra/provider costs, not revenue alone.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Support burden and gross-margin drivers are measured\", the required capability is materially absent, or the check cannot be demonstrated after review: Include support/infra/provider costs, not revenue alone.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-TWENTY",
+        "REF-N8N"
+      ]
+    },
+    {
+      "id": "BR360-BIZ-005",
+      "title": "Paying-customer or equivalent value evidence is distinguished from intent",
+      "domain": "business",
+      "description": "Do not convert signups or code completeness into commercial proof.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Do not convert signups or code completeness into commercial proof."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Paying-customer or equivalent value evidence is distinguished from intent?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Paying-customer or equivalent value evidence is distinguished from intent\" for the applicable scope; the review/test addresses this check: Do not convert signups or code completeness into commercial proof; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Paying-customer or equivalent value evidence is distinguished from intent\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Do not convert signups or code completeness into commercial proof.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Paying-customer or equivalent value evidence is distinguished from intent\", the required capability is materially absent, or the check cannot be demonstrated after review: Do not convert signups or code completeness into commercial proof.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-TWENTY",
+        "REF-N8N"
+      ]
+    },
+    {
+      "id": "BR360-BIZ-006",
+      "title": "Material legal/commercial blockers are identified",
+      "domain": "business",
+      "description": "Record licensing, terms, regulated-domain and contracting review gaps.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "LEGAL_REVIEW",
+      "detectors": [],
+      "checks": [
+        "Record licensing, terms, regulated-domain and contracting review gaps."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Material legal/commercial blockers are identified?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Material legal/commercial blockers are identified\" for the applicable scope; the review/test addresses this check: Record licensing, terms, regulated-domain and contracting review gaps; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Material legal/commercial blockers are identified\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Record licensing, terms, regulated-domain and contracting review gaps.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Material legal/commercial blockers are identified\", the required capability is materially absent, or the check cannot be demonstrated after review: Record licensing, terms, regulated-domain and contracting review gaps.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-TWENTY",
+        "REF-N8N"
+      ]
+    }
+  ]
+}

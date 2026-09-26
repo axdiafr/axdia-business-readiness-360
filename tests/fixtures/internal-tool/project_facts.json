@@ -1,0 +1,7 @@
+{
+  "facts": [
+    "has_web_ui",
+    "has_human_ui",
+    "internal_product"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "facts": [
+    "has_mobile",
+    "has_human_ui",
+    "has_auth",
+    "commercial_product"
+  ]
+}

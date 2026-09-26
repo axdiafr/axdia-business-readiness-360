@@ -1,0 +1,181 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "sre",
+  "controls": [
+    {
+      "id": "BR360-SRE-001",
+      "title": "Service-level indicators are defined for user-important behavior",
+      "domain": "sre",
+      "description": "Choose measurable SLIs tied to service outcomes.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Choose measurable SLIs tied to service outcomes."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Service-level indicators are defined for user-important behavior?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Service-level indicators are defined for user-important behavior\" for the applicable scope; the review/test addresses this check: Choose measurable SLIs tied to service outcomes; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Service-level indicators are defined for user-important behavior\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Choose measurable SLIs tied to service outcomes.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Service-level indicators are defined for user-important behavior\", the required capability is materially absent, or the check cannot be demonstrated after review: Choose measurable SLIs tied to service outcomes.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENSLO",
+        "REF-PROMETHEUS",
+        "REF-ALERTMANAGER"
+      ]
+    },
+    {
+      "id": "BR360-SRE-002",
+      "title": "SLO targets and windows are explicit where service operation applies",
+      "domain": "sre",
+      "description": "Define target, window and measurement source.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Define target, window and measurement source."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: SLO targets and windows are explicit where service operation applies?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"SLO targets and windows are explicit where service operation applies\" for the applicable scope; the review/test addresses this check: Define target, window and measurement source; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"SLO targets and windows are explicit where service operation applies\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Define target, window and measurement source.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"SLO targets and windows are explicit where service operation applies\", the required capability is materially absent, or the check cannot be demonstrated after review: Define target, window and measurement source.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENSLO",
+        "REF-PROMETHEUS",
+        "REF-ALERTMANAGER"
+      ]
+    },
+    {
+      "id": "BR360-SRE-003",
+      "title": "Error budget and burn-rate policy exists for critical services",
+      "domain": "sre",
+      "description": "Calculate consumption and alerting when SLO applies.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Calculate consumption and alerting when SLO applies."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Error budget and burn-rate policy exists for critical services?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Error budget and burn-rate policy exists for critical services\" for the applicable scope; the review/test addresses this check: Calculate consumption and alerting when SLO applies; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Error budget and burn-rate policy exists for critical services\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Calculate consumption and alerting when SLO applies.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Error budget and burn-rate policy exists for critical services\", the required capability is materially absent, or the check cannot be demonstrated after review: Calculate consumption and alerting when SLO applies.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENSLO",
+        "REF-PROMETHEUS",
+        "REF-ALERTMANAGER"
+      ]
+    },
+    {
+      "id": "BR360-SRE-004",
+      "title": "Service ownership and incident escalation are explicit",
+      "domain": "sre",
+      "description": "Record owners, escalation and on-call expectations.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Record owners, escalation and on-call expectations."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Service ownership and incident escalation are explicit?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Service ownership and incident escalation are explicit\" for the applicable scope; the review/test addresses this check: Record owners, escalation and on-call expectations; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Service ownership and incident escalation are explicit\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Record owners, escalation and on-call expectations.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Service ownership and incident escalation are explicit\", the required capability is materially absent, or the check cannot be demonstrated after review: Record owners, escalation and on-call expectations.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENSLO",
+        "REF-PROMETHEUS",
+        "REF-ALERTMANAGER"
+      ]
+    },
+    {
+      "id": "BR360-SRE-005",
+      "title": "Capacity risks are measured before scaling claims",
+      "domain": "sre",
+      "description": "Use capacity evidence rather than architecture claims alone.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Use capacity evidence rather than architecture claims alone."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Capacity risks are measured before scaling claims?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Capacity risks are measured before scaling claims\" for the applicable scope; the review/test addresses this check: Use capacity evidence rather than architecture claims alone; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Capacity risks are measured before scaling claims\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use capacity evidence rather than architecture claims alone.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Capacity risks are measured before scaling claims\", the required capability is materially absent, or the check cannot be demonstrated after review: Use capacity evidence rather than architecture claims alone.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENSLO",
+        "REF-PROMETHEUS",
+        "REF-ALERTMANAGER"
+      ]
+    }
+  ]
+}

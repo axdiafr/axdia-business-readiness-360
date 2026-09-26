@@ -1,0 +1,19 @@
+{
+  "schema": "BR360-AUDIT-COMPARE-3",
+  "fingerprint_fields": [
+    "audit_domain",
+    "affected_asset",
+    "control_id",
+    "package_or_resource",
+    "issue_identifier",
+    "location"
+  ],
+  "outputs": [
+    "new_findings",
+    "resolved_findings",
+    "persistent_findings",
+    "score_delta",
+    "maturity_delta"
+  ],
+  "dedup_policy": "Merge multiple scanner proofs into one business finding when fingerprint identifies the same issue. Evidence history remains attached to evaluations/results."
+}

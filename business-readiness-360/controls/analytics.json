@@ -1,0 +1,181 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "analytics",
+  "controls": [
+    {
+      "id": "BR360-ANA-001",
+      "title": "Activation can be measured",
+      "domain": "analytics",
+      "description": "Validate event/identity path for activation.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Validate event/identity path for activation."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Activation can be measured?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Activation can be measured\" for the applicable scope; the review/test addresses this check: Validate event/identity path for activation; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Activation can be measured\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Validate event/identity path for activation.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Activation can be measured\", the required capability is materially absent, or the check cannot be demonstrated after review: Validate event/identity path for activation.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-POSTHOG-FOSS",
+        "REF-UMAMI",
+        "REF-PLAUSIBLE-DOCS"
+      ]
+    },
+    {
+      "id": "BR360-ANA-002",
+      "title": "Retention or repeat use can be measured",
+      "domain": "analytics",
+      "description": "Require real cohort/repeat-use evidence where relevant.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Require real cohort/repeat-use evidence where relevant."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Retention or repeat use can be measured?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Retention or repeat use can be measured\" for the applicable scope; the review/test addresses this check: Require real cohort/repeat-use evidence where relevant; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Retention or repeat use can be measured\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require real cohort/repeat-use evidence where relevant.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Retention or repeat use can be measured\", the required capability is materially absent, or the check cannot be demonstrated after review: Require real cohort/repeat-use evidence where relevant.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-POSTHOG-FOSS",
+        "REF-UMAMI",
+        "REF-PLAUSIBLE-DOCS"
+      ]
+    },
+    {
+      "id": "BR360-ANA-003",
+      "title": "Conversion funnel can be measured end-to-end",
+      "domain": "analytics",
+      "description": "Ensure major funnel steps are observable.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Ensure major funnel steps are observable."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Conversion funnel can be measured end-to-end?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Conversion funnel can be measured end-to-end\" for the applicable scope; the review/test addresses this check: Ensure major funnel steps are observable; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Conversion funnel can be measured end-to-end\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Ensure major funnel steps are observable.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Conversion funnel can be measured end-to-end\", the required capability is materially absent, or the check cannot be demonstrated after review: Ensure major funnel steps are observable.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-POSTHOG-FOSS",
+        "REF-UMAMI",
+        "REF-PLAUSIBLE-DOCS"
+      ]
+    },
+    {
+      "id": "BR360-ANA-004",
+      "title": "Feature usage can be measured without vendor lock-in assumptions",
+      "domain": "analytics",
+      "description": "Check capability, not a required analytics vendor.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check capability, not a required analytics vendor."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Feature usage can be measured without vendor lock-in assumptions?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Feature usage can be measured without vendor lock-in assumptions\" for the applicable scope; the review/test addresses this check: Check capability, not a required analytics vendor; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Feature usage can be measured without vendor lock-in assumptions\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check capability, not a required analytics vendor.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Feature usage can be measured without vendor lock-in assumptions\", the required capability is materially absent, or the check cannot be demonstrated after review: Check capability, not a required analytics vendor.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-POSTHOG-FOSS",
+        "REF-UMAMI",
+        "REF-PLAUSIBLE-DOCS"
+      ]
+    },
+    {
+      "id": "BR360-ANA-005",
+      "title": "Analytics collection respects declared privacy choices",
+      "domain": "analytics",
+      "description": "Review consent/opt-out and data minimization where applicable.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Review consent/opt-out and data minimization where applicable."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Analytics collection respects declared privacy choices?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Analytics collection respects declared privacy choices\" for the applicable scope; the review/test addresses this check: Review consent/opt-out and data minimization where applicable; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Analytics collection respects declared privacy choices\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Review consent/opt-out and data minimization where applicable.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Analytics collection respects declared privacy choices\", the required capability is materially absent, or the check cannot be demonstrated after review: Review consent/opt-out and data minimization where applicable.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-POSTHOG-FOSS",
+        "REF-UMAMI",
+        "REF-PLAUSIBLE-DOCS"
+      ]
+    }
+  ]
+}

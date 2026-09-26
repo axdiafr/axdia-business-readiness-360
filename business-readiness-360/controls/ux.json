@@ -1,0 +1,136 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "ux",
+  "controls": [
+    {
+      "id": "BR360-UX-001",
+      "title": "Onboarding is understandable without expert knowledge",
+      "domain": "ux",
+      "description": "Review first-run flow and beginner labels; browser test when UI exists.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Review first-run flow and beginner labels; browser test when UI exists."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Onboarding is understandable without expert knowledge?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Onboarding is understandable without expert knowledge\" for the applicable scope; the review/test addresses this check: Review first-run flow and beginner labels; browser test when UI exists; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Onboarding is understandable without expert knowledge\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Review first-run flow and beginner labels; browser test when UI exists.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Onboarding is understandable without expert knowledge\", the required capability is materially absent, or the check cannot be demonstrated after review: Review first-run flow and beginner labels; browser test when UI exists.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-UX-002",
+      "title": "Time-to-value path is short and observable",
+      "domain": "ux",
+      "description": "Measure or validate time from start to first meaningful outcome.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "USER_EVIDENCE"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Measure or validate time from start to first meaningful outcome."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Time-to-value path is short and observable?"
+      ],
+      "pass_condition": "PASS when USER_EVIDENCE evidence directly demonstrates \"Time-to-value path is short and observable\" for the applicable scope; the review/test addresses this check: Measure or validate time from start to first meaningful outcome; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Time-to-value path is short and observable\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Measure or validate time from start to first meaningful outcome.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Time-to-value path is short and observable\", the required capability is materially absent, or the check cannot be demonstrated after review: Measure or validate time from start to first meaningful outcome.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-UX-003",
+      "title": "Errors provide recovery actions",
+      "domain": "ux",
+      "description": "Exercise representative failures and confirm actionable recovery UX.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Exercise representative failures and confirm actionable recovery UX."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Errors provide recovery actions?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Errors provide recovery actions\" for the applicable scope; the review/test addresses this check: Exercise representative failures and confirm actionable recovery UX; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Errors provide recovery actions\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Exercise representative failures and confirm actionable recovery UX.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Errors provide recovery actions\", the required capability is materially absent, or the check cannot be demonstrated after review: Exercise representative failures and confirm actionable recovery UX.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-UX-004",
+      "title": "Responsive and keyboard navigation are stable",
+      "domain": "ux",
+      "description": "Check target viewports, focus order and keyboard reachability.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check target viewports, focus order and keyboard reachability."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Responsive and keyboard navigation are stable?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Responsive and keyboard navigation are stable\" for the applicable scope; the review/test addresses this check: Check target viewports, focus order and keyboard reachability; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Responsive and keyboard navigation are stable\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check target viewports, focus order and keyboard reachability.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Responsive and keyboard navigation are stable\", the required capability is materially absent, or the check cannot be demonstrated after review: Check target viewports, focus order and keyboard reachability.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-UX-005",
+      "title": "Simple and expert modes avoid unnecessary cognitive load",
+      "domain": "ux",
+      "description": "Assess progressive disclosure and terminology for non-technical users.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Assess progressive disclosure and terminology for non-technical users."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Simple and expert modes avoid unnecessary cognitive load?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Simple and expert modes avoid unnecessary cognitive load\" for the applicable scope; the review/test addresses this check: Assess progressive disclosure and terminology for non-technical users; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Simple and expert modes avoid unnecessary cognitive load\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Assess progressive disclosure and terminology for non-technical users.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Simple and expert modes avoid unnecessary cognitive load\", the required capability is materially absent, or the check cannot be demonstrated after review: Assess progressive disclosure and terminology for non-technical users.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

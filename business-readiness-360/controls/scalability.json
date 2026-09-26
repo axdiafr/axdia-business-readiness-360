@@ -1,0 +1,136 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "scalability",
+  "controls": [
+    {
+      "id": "BR360-SCALE-001",
+      "title": "Known bottlenecks are identified with evidence",
+      "domain": "scalability",
+      "description": "Measure before proposing scaling architecture.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Measure before proposing scaling architecture."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Known bottlenecks are identified with evidence?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Known bottlenecks are identified with evidence\" for the applicable scope; the review/test addresses this check: Measure before proposing scaling architecture; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Known bottlenecks are identified with evidence\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Measure before proposing scaling architecture.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Known bottlenecks are identified with evidence\", the required capability is materially absent, or the check cannot be demonstrated after review: Measure before proposing scaling architecture.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-SCALE-002",
+      "title": "Data growth limits and migration paths are understood",
+      "domain": "scalability",
+      "description": "Assess indexes, storage, archival and partition needs when relevant.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Assess indexes, storage, archival and partition needs when relevant."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Data growth limits and migration paths are understood?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Data growth limits and migration paths are understood\" for the applicable scope; the review/test addresses this check: Assess indexes, storage, archival and partition needs when relevant; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Data growth limits and migration paths are understood\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Assess indexes, storage, archival and partition needs when relevant.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Data growth limits and migration paths are understood\", the required capability is materially absent, or the check cannot be demonstrated after review: Assess indexes, storage, archival and partition needs when relevant.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-SCALE-003",
+      "title": "Async jobs/queues have backpressure and failure handling when present",
+      "domain": "scalability",
+      "description": "Check retries, poison messages, idempotency and backlog signals.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check retries, poison messages, idempotency and backlog signals."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Async jobs/queues have backpressure and failure handling when present?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Async jobs/queues have backpressure and failure handling when present\" for the applicable scope; the review/test addresses this check: Check retries, poison messages, idempotency and backlog signals; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Async jobs/queues have backpressure and failure handling when present\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check retries, poison messages, idempotency and backlog signals.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Async jobs/queues have backpressure and failure handling when present\", the required capability is materially absent, or the check cannot be demonstrated after review: Check retries, poison messages, idempotency and backlog signals.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-SCALE-004",
+      "title": "Cost scales within acceptable bounds",
+      "domain": "scalability",
+      "description": "Model marginal infra/provider cost using measured drivers.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Model marginal infra/provider cost using measured drivers."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Cost scales within acceptable bounds?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Cost scales within acceptable bounds\" for the applicable scope; the review/test addresses this check: Model marginal infra/provider cost using measured drivers; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Cost scales within acceptable bounds\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Model marginal infra/provider cost using measured drivers.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Cost scales within acceptable bounds\", the required capability is materially absent, or the check cannot be demonstrated after review: Model marginal infra/provider cost using measured drivers.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-SCALE-005",
+      "title": "Operational workload scales beyond a single operator where needed",
+      "domain": "scalability",
+      "description": "Assess runbooks, automation and ownership concentration.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Assess runbooks, automation and ownership concentration."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Operational workload scales beyond a single operator where needed?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Operational workload scales beyond a single operator where needed\" for the applicable scope; the review/test addresses this check: Assess runbooks, automation and ownership concentration; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Operational workload scales beyond a single operator where needed\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Assess runbooks, automation and ownership concentration.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Operational workload scales beyond a single operator where needed\", the required capability is materially absent, or the check cannot be demonstrated after review: Assess runbooks, automation and ownership concentration.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

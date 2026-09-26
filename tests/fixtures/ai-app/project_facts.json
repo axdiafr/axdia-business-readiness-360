@@ -1,0 +1,9 @@
+{
+  "facts": [
+    "uses_ai",
+    "has_web_ui",
+    "has_human_ui",
+    "has_api",
+    "commercial_product"
+  ]
+}

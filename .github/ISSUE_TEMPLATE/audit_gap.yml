@@ -1,0 +1,30 @@
+name: Audit gap / false result
+description: Report a missing control or a false PASS/PARTIAL/FAIL
+title: "[Audit gap]: "
+labels: ["audit-gap"]
+body:
+  - type: input
+    id: control
+    attributes:
+      label: Control ID or domain
+      placeholder: "BR360-SEC-002 or security"
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options: [Missing control, False PASS, False FAIL, False PARTIAL, Applicability error, Evidence normalization issue, Scoring issue]
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior and evidence
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Prefer a minimal synthetic fixture.
+    validations:
+      required: true

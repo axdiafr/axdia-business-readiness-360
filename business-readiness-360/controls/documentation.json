@@ -1,0 +1,151 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "documentation",
+  "controls": [
+    {
+      "id": "BR360-DOC-001",
+      "title": "Quickstart reaches a first successful outcome",
+      "domain": "documentation",
+      "description": "Follow quickstart from clean state when safe.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Follow quickstart from clean state when safe."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Quickstart reaches a first successful outcome?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Quickstart reaches a first successful outcome\" for the applicable scope; the review/test addresses this check: Follow quickstart from clean state when safe; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Quickstart reaches a first successful outcome\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Follow quickstart from clean state when safe.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Quickstart reaches a first successful outcome\", the required capability is materially absent, or the check cannot be demonstrated after review: Follow quickstart from clean state when safe.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD"
+      ]
+    },
+    {
+      "id": "BR360-DOC-002",
+      "title": "Architecture documentation covers context, constraints and quality goals",
+      "domain": "documentation",
+      "description": "Use arc42-style completeness concepts without copying templates.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Use arc42-style completeness concepts without copying templates."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Architecture documentation covers context, constraints and quality goals?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Architecture documentation covers context, constraints and quality goals\" for the applicable scope; the review/test addresses this check: Use arc42-style completeness concepts without copying templates; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Architecture documentation covers context, constraints and quality goals\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use arc42-style completeness concepts without copying templates.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Architecture documentation covers context, constraints and quality goals\", the required capability is materially absent, or the check cannot be demonstrated after review: Use arc42-style completeness concepts without copying templates.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD"
+      ]
+    },
+    {
+      "id": "BR360-DOC-003",
+      "title": "Important decisions are traceable with alternatives and consequences",
+      "domain": "documentation",
+      "description": "Use ADR-style decision records or equivalent.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Use ADR-style decision records or equivalent."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Important decisions are traceable with alternatives and consequences?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Important decisions are traceable with alternatives and consequences\" for the applicable scope; the review/test addresses this check: Use ADR-style decision records or equivalent; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Important decisions are traceable with alternatives and consequences\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use ADR-style decision records or equivalent.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Important decisions are traceable with alternatives and consequences\", the required capability is materially absent, or the check cannot be demonstrated after review: Use ADR-style decision records or equivalent.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD"
+      ]
+    },
+    {
+      "id": "BR360-DOC-004",
+      "title": "Operational and security procedures are documented",
+      "domain": "documentation",
+      "description": "Cover deployment, recovery, incident and security-sensitive procedures.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Cover deployment, recovery, incident and security-sensitive procedures."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Operational and security procedures are documented?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Operational and security procedures are documented\" for the applicable scope; the review/test addresses this check: Cover deployment, recovery, incident and security-sensitive procedures; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Operational and security procedures are documented\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Cover deployment, recovery, incident and security-sensitive procedures.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Operational and security procedures are documented\", the required capability is materially absent, or the check cannot be demonstrated after review: Cover deployment, recovery, incident and security-sensitive procedures.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD"
+      ]
+    },
+    {
+      "id": "BR360-DOC-005",
+      "title": "API/user documentation reflects current behavior",
+      "domain": "documentation",
+      "description": "Detect drift between docs/contracts and implementation.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Detect drift between docs/contracts and implementation."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: API/user documentation reflects current behavior?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"API/user documentation reflects current behavior\" for the applicable scope; the review/test addresses this check: Detect drift between docs/contracts and implementation; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"API/user documentation reflects current behavior\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Detect drift between docs/contracts and implementation.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"API/user documentation reflects current behavior\", the required capability is materially absent, or the check cannot be demonstrated after review: Detect drift between docs/contracts and implementation.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD"
+      ]
+    }
+  ]
+}

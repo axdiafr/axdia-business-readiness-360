@@ -1,0 +1,424 @@
+{
+  "schema": "BR360-ADAPTERS-2",
+  "policy": "CANDIDATES_NOT_AUTHORIZED",
+  "adapters": [
+    {
+      "id": "lighthouse",
+      "detect": {
+        "executables": [
+          "lighthouse"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "performance"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "lighthouse <scoped args>",
+        "network_required": false,
+        "read_only": true
+      },
+      "parse_output": "json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "Tool must already be installed and explicitly authorized."
+      ],
+      "network_intent": {
+        "network_required": false,
+        "destination_type": "none_by_default",
+        "reason": "Core candidate can run without external network; remote targets require separate explicit authorization.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "playwright",
+      "detect": {
+        "executables": [
+          "playwright"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "ux"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "playwright <scoped args>",
+        "network_required": false,
+        "read_only": true
+      },
+      "parse_output": "report",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "Tool must already be installed and explicitly authorized."
+      ],
+      "network_intent": {
+        "network_required": false,
+        "destination_type": "none_by_default",
+        "reason": "Core candidate can run without external network; remote targets require separate explicit authorization.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "axe",
+      "detect": {
+        "executables": [
+          "axe"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "accessibility"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "axe <scoped args>",
+        "network_required": false,
+        "read_only": true
+      },
+      "parse_output": "json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "Tool must already be installed and explicitly authorized."
+      ],
+      "network_intent": {
+        "network_required": false,
+        "destination_type": "none_by_default",
+        "reason": "Core candidate can run without external network; remote targets require separate explicit authorization.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "pa11y",
+      "detect": {
+        "executables": [
+          "pa11y"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "accessibility"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "pa11y <scoped args>",
+        "network_required": false,
+        "read_only": true
+      },
+      "parse_output": "json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "Tool must already be installed and explicitly authorized."
+      ],
+      "network_intent": {
+        "network_required": false,
+        "destination_type": "none_by_default",
+        "reason": "Core candidate can run without external network; remote targets require separate explicit authorization.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "k6",
+      "detect": {
+        "executables": [
+          "k6"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "performance"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "k6 <scoped args>",
+        "network_required": false,
+        "read_only": true
+      },
+      "parse_output": "json-summary",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "Tool must already be installed and explicitly authorized."
+      ],
+      "network_intent": {
+        "network_required": false,
+        "destination_type": "none_by_default",
+        "reason": "Core candidate can run without external network; remote targets require separate explicit authorization.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "trivy",
+      "detect": {
+        "executables": [
+          "trivy"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "supply-chain"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "trivy <scoped args>",
+        "network_required": true,
+        "read_only": true
+      },
+      "parse_output": "json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "May download/update vulnerability databases; network intent must be explicit."
+      ],
+      "network_intent": {
+        "network_required": true,
+        "destination_type": "vulnerability_database_or_public_advisory",
+        "reason": "Read-only metadata lookup/update required by this optional adapter.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "gitleaks",
+      "detect": {
+        "executables": [
+          "gitleaks"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "security"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "gitleaks <scoped args>",
+        "network_required": false,
+        "read_only": true
+      },
+      "parse_output": "json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "Tool must already be installed and explicitly authorized."
+      ],
+      "network_intent": {
+        "network_required": false,
+        "destination_type": "none_by_default",
+        "reason": "Core candidate can run without external network; remote targets require separate explicit authorization.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "osv-scanner",
+      "detect": {
+        "executables": [
+          "osv-scanner"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "supply-chain"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "osv-scanner <scoped args>",
+        "network_required": true,
+        "read_only": true
+      },
+      "parse_output": "json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "May query/update advisory data depending on mode."
+      ],
+      "network_intent": {
+        "network_required": true,
+        "destination_type": "vulnerability_database_or_public_advisory",
+        "reason": "Read-only metadata lookup/update required by this optional adapter.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "syft",
+      "detect": {
+        "executables": [
+          "syft"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "supply-chain"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "syft <scoped args>",
+        "network_required": false,
+        "read_only": true
+      },
+      "parse_output": "cyclonedx-json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "Tool must already be installed and explicitly authorized."
+      ],
+      "network_intent": {
+        "network_required": false,
+        "destination_type": "none_by_default",
+        "reason": "Core candidate can run without external network; remote targets require separate explicit authorization.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "grype",
+      "detect": {
+        "executables": [
+          "grype"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "supply-chain"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "grype <scoped args>",
+        "network_required": true,
+        "read_only": true
+      },
+      "parse_output": "json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "May update vulnerability database depending on mode."
+      ],
+      "network_intent": {
+        "network_required": true,
+        "destination_type": "vulnerability_database_or_public_advisory",
+        "reason": "Read-only metadata lookup/update required by this optional adapter.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    },
+    {
+      "id": "schemathesis",
+      "detect": {
+        "executables": [
+          "schemathesis"
+        ]
+      },
+      "version": "candidate: --version",
+      "capabilities": [
+        "api"
+      ],
+      "build_command": {
+        "status": "CANDIDATE",
+        "template": "schemathesis <scoped args>",
+        "network_required": false,
+        "read_only": true
+      },
+      "parse_output": "junit/json",
+      "normalize_findings": {
+        "target_schema": "BUSINESS_READINESS_360_FINDING.schema.json"
+      },
+      "evidence": [
+        "tool_version",
+        "command_candidate",
+        "raw_output_digest",
+        "normalized_findings"
+      ],
+      "limitations": [
+        "Tool must already be installed and explicitly authorized."
+      ],
+      "network_intent": {
+        "network_required": false,
+        "destination_type": "none_by_default",
+        "reason": "Core candidate can run without external network; remote targets require separate explicit authorization.",
+        "read_only": true,
+        "cost_possible": false
+      }
+    }
+  ]
+}

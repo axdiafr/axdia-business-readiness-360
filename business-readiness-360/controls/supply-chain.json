@@ -1,0 +1,218 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "supply-chain",
+  "controls": [
+    {
+      "id": "BR360-SC-001",
+      "title": "Dependency inventory is reproducible",
+      "domain": "supply-chain",
+      "description": "Detect package managers, lockfiles and reproducible dependency inventory.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.dependency_inventory"
+      ],
+      "checks": [
+        "Detect package managers, lockfiles and reproducible dependency inventory."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Dependency inventory is reproducible?"
+      ],
+      "pass_condition": "A recognized dependency manifest and lock/integrity file are both present.",
+      "partial_condition": "A dependency manifest exists without a recognized lock/integrity file.",
+      "fail_condition": "No reproducible dependency inventory can be established from the inspected project.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-SLSA",
+        "REF-SYFT",
+        "REF-GRYPE",
+        "REF-CYCLONEDX-CLI",
+        "REF-SPDX-SPEC",
+        "REF-OSV-SCANNER",
+        "REF-TRIVY",
+        "REF-RENOVATE"
+      ]
+    },
+    {
+      "id": "BR360-SC-002",
+      "title": "SBOM can be produced in a standard format",
+      "domain": "supply-chain",
+      "description": "Use detected Syft/CycloneDX/SPDX adapters or local equivalent.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Use detected Syft/CycloneDX/SPDX adapters or local equivalent."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: SBOM can be produced in a standard format?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"SBOM can be produced in a standard format\" for the applicable scope; the review/test addresses this check: Use detected Syft/CycloneDX/SPDX adapters or local equivalent; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"SBOM can be produced in a standard format\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use detected Syft/CycloneDX/SPDX adapters or local equivalent.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"SBOM can be produced in a standard format\", the required capability is materially absent, or the check cannot be demonstrated after review: Use detected Syft/CycloneDX/SPDX adapters or local equivalent.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-SLSA",
+        "REF-SYFT",
+        "REF-GRYPE",
+        "REF-CYCLONEDX-CLI",
+        "REF-SPDX-SPEC",
+        "REF-OSV-SCANNER",
+        "REF-TRIVY",
+        "REF-RENOVATE"
+      ]
+    },
+    {
+      "id": "BR360-SC-003",
+      "title": "Known dependency vulnerabilities are normalized and deduplicated",
+      "domain": "supply-chain",
+      "description": "Merge OSV/Trivy/Grype-style findings by package and issue identifier.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Merge OSV/Trivy/Grype-style findings by package and issue identifier."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Known dependency vulnerabilities are normalized and deduplicated?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Known dependency vulnerabilities are normalized and deduplicated\" for the applicable scope; the review/test addresses this check: Merge OSV/Trivy/Grype-style findings by package and issue identifier; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Known dependency vulnerabilities are normalized and deduplicated\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Merge OSV/Trivy/Grype-style findings by package and issue identifier.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Known dependency vulnerabilities are normalized and deduplicated\", the required capability is materially absent, or the check cannot be demonstrated after review: Merge OSV/Trivy/Grype-style findings by package and issue identifier.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-SLSA",
+        "REF-SYFT",
+        "REF-GRYPE",
+        "REF-CYCLONEDX-CLI",
+        "REF-SPDX-SPEC",
+        "REF-OSV-SCANNER",
+        "REF-TRIVY",
+        "REF-RENOVATE"
+      ]
+    },
+    {
+      "id": "BR360-SC-004",
+      "title": "Build provenance and integrity are evidenced where release risk warrants it",
+      "domain": "supply-chain",
+      "description": "Assess SLSA-style source/build provenance and attestations.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "EVIDENCE"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Assess SLSA-style source/build provenance and attestations."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Build provenance and integrity are evidenced where release risk warrants it?"
+      ],
+      "pass_condition": "PASS when EVIDENCE evidence directly demonstrates \"Build provenance and integrity are evidenced where release risk warrants it\" for the applicable scope; the review/test addresses this check: Assess SLSA-style source/build provenance and attestations; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Build provenance and integrity are evidenced where release risk warrants it\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Assess SLSA-style source/build provenance and attestations.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Build provenance and integrity are evidenced where release risk warrants it\", the required capability is materially absent, or the check cannot be demonstrated after review: Assess SLSA-style source/build provenance and attestations.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-SLSA",
+        "REF-SYFT",
+        "REF-GRYPE",
+        "REF-CYCLONEDX-CLI",
+        "REF-SPDX-SPEC",
+        "REF-OSV-SCANNER",
+        "REF-TRIVY",
+        "REF-RENOVATE"
+      ]
+    },
+    {
+      "id": "BR360-SC-005",
+      "title": "Dependency freshness and update governance are defined",
+      "domain": "supply-chain",
+      "description": "Check update cadence, stale dependencies and automated update policy.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check update cadence, stale dependencies and automated update policy."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Dependency freshness and update governance are defined?"
+      ],
+      "pass_condition": "PASS when CONFIG evidence directly demonstrates \"Dependency freshness and update governance are defined\" for the applicable scope; the review/test addresses this check: Check update cadence, stale dependencies and automated update policy; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Dependency freshness and update governance are defined\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check update cadence, stale dependencies and automated update policy.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Dependency freshness and update governance are defined\", the required capability is materially absent, or the check cannot be demonstrated after review: Check update cadence, stale dependencies and automated update policy.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-SLSA",
+        "REF-SYFT",
+        "REF-GRYPE",
+        "REF-CYCLONEDX-CLI",
+        "REF-SPDX-SPEC",
+        "REF-OSV-SCANNER",
+        "REF-TRIVY",
+        "REF-RENOVATE"
+      ]
+    },
+    {
+      "id": "BR360-SC-006",
+      "title": "Dependency licenses are inventoried before distribution",
+      "domain": "supply-chain",
+      "description": "Produce license inventory and flag incompatible/unknown licenses.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "EVIDENCE"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Produce license inventory and flag incompatible/unknown licenses."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Dependency licenses are inventoried before distribution?"
+      ],
+      "pass_condition": "PASS when EVIDENCE evidence directly demonstrates \"Dependency licenses are inventoried before distribution\" for the applicable scope; the review/test addresses this check: Produce license inventory and flag incompatible/unknown licenses; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Dependency licenses are inventoried before distribution\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Produce license inventory and flag incompatible/unknown licenses.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Dependency licenses are inventoried before distribution\", the required capability is materially absent, or the check cannot be demonstrated after review: Produce license inventory and flag incompatible/unknown licenses.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-SLSA",
+        "REF-SYFT",
+        "REF-GRYPE",
+        "REF-CYCLONEDX-CLI",
+        "REF-SPDX-SPEC",
+        "REF-OSV-SCANNER",
+        "REF-TRIVY",
+        "REF-RENOVATE"
+      ]
+    }
+  ]
+}

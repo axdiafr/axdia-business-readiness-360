@@ -1,0 +1,191 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "observability",
+  "controls": [
+    {
+      "id": "BR360-OBS-001",
+      "title": "Meaningful metrics exist for health and user-critical paths",
+      "domain": "observability",
+      "description": "Verify metrics are actionable and owned.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Verify metrics are actionable and owned."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Meaningful metrics exist for health and user-critical paths?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Meaningful metrics exist for health and user-critical paths\" for the applicable scope; the review/test addresses this check: Verify metrics are actionable and owned; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Meaningful metrics exist for health and user-critical paths\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Verify metrics are actionable and owned.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Meaningful metrics exist for health and user-critical paths\", the required capability is materially absent, or the check cannot be demonstrated after review: Verify metrics are actionable and owned.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENTELEMETRY-SPECIFICATION",
+        "REF-OPENTELEMETRY-COLLECTOR",
+        "REF-PROMETHEUS",
+        "REF-GRAFANA",
+        "REF-SENTRY"
+      ]
+    },
+    {
+      "id": "BR360-OBS-002",
+      "title": "Structured logs support diagnosis without leaking sensitive data",
+      "domain": "observability",
+      "description": "Check structure, correlation and privacy.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check structure, correlation and privacy."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Structured logs support diagnosis without leaking sensitive data?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Structured logs support diagnosis without leaking sensitive data\" for the applicable scope; the review/test addresses this check: Check structure, correlation and privacy; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Structured logs support diagnosis without leaking sensitive data\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check structure, correlation and privacy.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Structured logs support diagnosis without leaking sensitive data\", the required capability is materially absent, or the check cannot be demonstrated after review: Check structure, correlation and privacy.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENTELEMETRY-SPECIFICATION",
+        "REF-OPENTELEMETRY-COLLECTOR",
+        "REF-PROMETHEUS",
+        "REF-GRAFANA",
+        "REF-SENTRY"
+      ]
+    },
+    {
+      "id": "BR360-OBS-003",
+      "title": "Distributed traces or equivalent correlation exist when architecture needs them",
+      "domain": "observability",
+      "description": "Apply only to distributed/runtime complexity that benefits from tracing.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Apply only to distributed/runtime complexity that benefits from tracing."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Distributed traces or equivalent correlation exist when architecture needs them?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Distributed traces or equivalent correlation exist when architecture needs them\" for the applicable scope; the review/test addresses this check: Apply only to distributed/runtime complexity that benefits from tracing; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Distributed traces or equivalent correlation exist when architecture needs them\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Apply only to distributed/runtime complexity that benefits from tracing.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Distributed traces or equivalent correlation exist when architecture needs them\", the required capability is materially absent, or the check cannot be demonstrated after review: Apply only to distributed/runtime complexity that benefits from tracing.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENTELEMETRY-SPECIFICATION",
+        "REF-OPENTELEMETRY-COLLECTOR",
+        "REF-PROMETHEUS",
+        "REF-GRAFANA",
+        "REF-SENTRY"
+      ]
+    },
+    {
+      "id": "BR360-OBS-004",
+      "title": "Errors are grouped, actionable and linked to release/context",
+      "domain": "observability",
+      "description": "Check issue grouping and diagnostic context.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check issue grouping and diagnostic context."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Errors are grouped, actionable and linked to release/context?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Errors are grouped, actionable and linked to release/context\" for the applicable scope; the review/test addresses this check: Check issue grouping and diagnostic context; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Errors are grouped, actionable and linked to release/context\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check issue grouping and diagnostic context.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Errors are grouped, actionable and linked to release/context\", the required capability is materially absent, or the check cannot be demonstrated after review: Check issue grouping and diagnostic context.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENTELEMETRY-SPECIFICATION",
+        "REF-OPENTELEMETRY-COLLECTOR",
+        "REF-PROMETHEUS",
+        "REF-GRAFANA",
+        "REF-SENTRY"
+      ]
+    },
+    {
+      "id": "BR360-OBS-005",
+      "title": "Alerts are actionable and mapped to ownership",
+      "domain": "observability",
+      "description": "Avoid alert count as a maturity proxy; require response intent.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Avoid alert count as a maturity proxy; require response intent."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Alerts are actionable and mapped to ownership?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Alerts are actionable and mapped to ownership\" for the applicable scope; the review/test addresses this check: Avoid alert count as a maturity proxy; require response intent; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Alerts are actionable and mapped to ownership\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Avoid alert count as a maturity proxy; require response intent.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Alerts are actionable and mapped to ownership\", the required capability is materially absent, or the check cannot be demonstrated after review: Avoid alert count as a maturity proxy; require response intent.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENTELEMETRY-SPECIFICATION",
+        "REF-OPENTELEMETRY-COLLECTOR",
+        "REF-PROMETHEUS",
+        "REF-GRAFANA",
+        "REF-SENTRY"
+      ]
+    }
+  ]
+}

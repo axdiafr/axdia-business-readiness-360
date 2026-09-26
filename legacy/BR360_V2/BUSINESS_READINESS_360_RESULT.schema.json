@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "BUSINESS_READINESS_360_RESULT.schema.json",
+  "title": "Business Readiness 360 Result V2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "pack_version",
+    "audit",
+    "project_profile",
+    "applicability",
+    "coverage",
+    "scores",
+    "maturity",
+    "findings",
+    "actions",
+    "audit_self_evaluation",
+    "final"
+  ],
+  "properties": {
+    "schema": {
+      "const": "BR360-2"
+    },
+    "pack_version": {
+      "const": "2.0.0"
+    },
+    "audit": {
+      "type": "object",
+      "required": [
+        "id",
+        "mode",
+        "profile"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "mode": {
+          "const": "READ_ONLY"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "network_intent": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "project_profile": {
+      "type": "object"
+    },
+    "applicability": {
+      "type": "object"
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "automated",
+        "manual",
+        "real_world",
+        "overall"
+      ],
+      "properties": {
+        "automated": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "manual": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "real_world": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "overall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "implementation",
+        "verification",
+        "real_world_evidence",
+        "readiness",
+        "confidence",
+        "evidence_strength"
+      ],
+      "properties": {
+        "implementation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "verification": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "real_world_evidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "readiness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "evidence_strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        }
+      },
+      "additionalProperties": false
+    },
+    "maturity": {
+      "type": "object",
+      "required": [
+        "level",
+        "name"
+      ],
+      "properties": {
+        "level": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "name": {
+          "enum": [
+            "ABSENT",
+            "AD_HOC",
+            "REPEATABLE",
+            "DEFINED",
+            "MEASURED",
+            "OPTIMIZED"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "schemas/BUSINESS_READINESS_360_FINDING.schema.json"
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "audit_self_evaluation": {
+      "type": "object",
+      "required": [
+        "audit_coverage",
+        "audit_confidence",
+        "missing_tools",
+        "missing_access",
+        "missing_real_world_data",
+        "unverified_assumptions",
+        "license_review_gaps"
+      ],
+      "properties": {
+        "audit_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "audit_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "missing_tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_access": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_real_world_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unverified_assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "license_review_gaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "final": {
+      "type": "object",
+      "required": [
+        "status",
+        "summary"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "FAIL",
+            "BLOCKED"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "extensions": {
+      "type": "object"
+    }
+  }
+}

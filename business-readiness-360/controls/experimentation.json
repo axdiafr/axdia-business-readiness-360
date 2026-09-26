@@ -1,0 +1,176 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "experimentation",
+  "controls": [
+    {
+      "id": "BR360-EXP-001",
+      "title": "Feature flag lifecycle and ownership are governed",
+      "domain": "experimentation",
+      "description": "Require owner, expiry/removal and safe defaults.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Require owner, expiry/removal and safe defaults."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Feature flag lifecycle and ownership are governed?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Feature flag lifecycle and ownership are governed\" for the applicable scope; the review/test addresses this check: Require owner, expiry/removal and safe defaults; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Feature flag lifecycle and ownership are governed\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require owner, expiry/removal and safe defaults.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Feature flag lifecycle and ownership are governed\", the required capability is materially absent, or the check cannot be demonstrated after review: Require owner, expiry/removal and safe defaults.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-GROWTHBOOK",
+        "REF-OPENFEATURE-SPEC"
+      ]
+    },
+    {
+      "id": "BR360-EXP-002",
+      "title": "Experiments declare hypothesis and decision metric",
+      "domain": "experimentation",
+      "description": "Prevent post-hoc success criteria.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Prevent post-hoc success criteria."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Experiments declare hypothesis and decision metric?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Experiments declare hypothesis and decision metric\" for the applicable scope; the review/test addresses this check: Prevent post-hoc success criteria; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Experiments declare hypothesis and decision metric\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Prevent post-hoc success criteria.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Experiments declare hypothesis and decision metric\", the required capability is materially absent, or the check cannot be demonstrated after review: Prevent post-hoc success criteria.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-GROWTHBOOK",
+        "REF-OPENFEATURE-SPEC"
+      ]
+    },
+    {
+      "id": "BR360-EXP-003",
+      "title": "Experiment guardrails protect reliability and user harm metrics",
+      "domain": "experimentation",
+      "description": "Define stop conditions and protected metrics.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Define stop conditions and protected metrics."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Experiment guardrails protect reliability and user harm metrics?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Experiment guardrails protect reliability and user harm metrics\" for the applicable scope; the review/test addresses this check: Define stop conditions and protected metrics; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Experiment guardrails protect reliability and user harm metrics\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Define stop conditions and protected metrics.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Experiment guardrails protect reliability and user harm metrics\", the required capability is materially absent, or the check cannot be demonstrated after review: Define stop conditions and protected metrics.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-GROWTHBOOK",
+        "REF-OPENFEATURE-SPEC"
+      ]
+    },
+    {
+      "id": "BR360-EXP-004",
+      "title": "Rollouts are staged and reversible when risk warrants it",
+      "domain": "experimentation",
+      "description": "Check percentage/cohort rollout and rollback path.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check percentage/cohort rollout and rollback path."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Rollouts are staged and reversible when risk warrants it?"
+      ],
+      "pass_condition": "PASS when CONFIG evidence directly demonstrates \"Rollouts are staged and reversible when risk warrants it\" for the applicable scope; the review/test addresses this check: Check percentage/cohort rollout and rollback path; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Rollouts are staged and reversible when risk warrants it\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check percentage/cohort rollout and rollback path.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Rollouts are staged and reversible when risk warrants it\", the required capability is materially absent, or the check cannot be demonstrated after review: Check percentage/cohort rollout and rollback path.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-GROWTHBOOK",
+        "REF-OPENFEATURE-SPEC"
+      ]
+    },
+    {
+      "id": "BR360-EXP-005",
+      "title": "Exposure/evaluation events are traceable",
+      "domain": "experimentation",
+      "description": "Ensure experiment analysis can reconstruct who saw what.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Ensure experiment analysis can reconstruct who saw what."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Exposure/evaluation events are traceable?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Exposure/evaluation events are traceable\" for the applicable scope; the review/test addresses this check: Ensure experiment analysis can reconstruct who saw what; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Exposure/evaluation events are traceable\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Ensure experiment analysis can reconstruct who saw what.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Exposure/evaluation events are traceable\", the required capability is materially absent, or the check cannot be demonstrated after review: Ensure experiment analysis can reconstruct who saw what.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-GROWTHBOOK",
+        "REF-OPENFEATURE-SPEC"
+      ]
+    }
+  ]
+}

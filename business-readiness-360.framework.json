@@ -1,0 +1,113 @@
+{
+  "id": "business-readiness-360",
+  "version": 3,
+  "detect": [
+    {
+      "path": "package.json"
+    },
+    {
+      "path": "pyproject.toml"
+    },
+    {
+      "path": "requirements.txt"
+    },
+    {
+      "path": "setup.py"
+    },
+    {
+      "path": "go.mod"
+    },
+    {
+      "path": "Cargo.toml"
+    },
+    {
+      "path": "pom.xml"
+    },
+    {
+      "path": "build.gradle"
+    },
+    {
+      "path": "composer.json"
+    },
+    {
+      "path": "Gemfile"
+    },
+    {
+      "path": "*.csproj"
+    },
+    {
+      "path": "*.sln"
+    },
+    {
+      "path": "index.html"
+    },
+    {
+      "path": "Dockerfile"
+    },
+    {
+      "path": "docker-compose.yml"
+    },
+    {
+      "path": "README.md"
+    }
+  ],
+  "files": [
+    "business-readiness-360/controls/product.json",
+    "business-readiness-360/controls/ux.json",
+    "business-readiness-360/controls/accessibility.json",
+    "business-readiness-360/controls/performance.json",
+    "business-readiness-360/controls/security.json",
+    "business-readiness-360/controls/supply-chain.json",
+    "business-readiness-360/controls/api.json",
+    "business-readiness-360/controls/authorization.json",
+    "business-readiness-360/controls/privacy.json",
+    "business-readiness-360/controls/ai.json",
+    "business-readiness-360/controls/data.json",
+    "business-readiness-360/controls/production.json",
+    "business-readiness-360/controls/sre.json",
+    "business-readiness-360/controls/observability.json",
+    "business-readiness-360/controls/resilience.json",
+    "business-readiness-360/controls/analytics.json",
+    "business-readiness-360/controls/experimentation.json",
+    "business-readiness-360/controls/business.json",
+    "business-readiness-360/controls/growth.json",
+    "business-readiness-360/controls/retention.json",
+    "business-readiness-360/controls/scalability.json",
+    "business-readiness-360/controls/documentation.json",
+    "business-readiness-360/controls/licensing.json",
+    "business-readiness-360/controls/architecture.json",
+    "business-readiness-360/profiles/PROFILES.json",
+    "business-readiness-360/detectors/PROJECT_DETECTORS.json",
+    "business-readiness-360/adapters/ADAPTERS.json",
+    "business-readiness-360/evidence/EVIDENCE_GRAPH.json",
+    "business-readiness-360/scoring/SCORING_MODEL.json",
+    "business-readiness-360/references/BR360_REFERENCES.json",
+    "business-readiness-360/detectors/CONTROL_DETECTORS.json",
+    "runtime/br360_engine.py",
+    "BUSINESS_READINESS_360_RESULT.schema.json",
+    "schemas/BUSINESS_READINESS_360_EVIDENCE.schema.json",
+    "schemas/BUSINESS_READINESS_360_FINDING.schema.json",
+    "examples/evidence-input.example.json"
+  ],
+  "checks": [
+    "syntax",
+    "contracts",
+    "security",
+    "supply-chain",
+    "data",
+    "performance",
+    "business-readiness-360-v3-execution"
+  ],
+  "risks": [
+    "Audit conclusions distinguish implementation, verification, and real-world evidence.",
+    "Built-in detectors are read-only and conservative; absence of evidence never becomes PASS.",
+    "No corpus repository code is authorized for execution or copying by inclusion in this pack.",
+    "External adapters are opt-in; network-required adapters are not executed by local-safe mode.",
+    "Not-applicable controls are excluded from scoring and retain an applicability reason.",
+    "Legal/compliance findings may require qualified review."
+  ],
+  "test_commands": [
+    "python3 -m unittest discover -s tests -v",
+    "python3 runtime/br360_engine.py selftest"
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "ai",
+  "controls": [
+    {
+      "id": "BR360-AI-001",
+      "title": "AI providers, models and data flows are inventoried",
+      "domain": "ai",
+      "description": "Detect providers/routes/config and record data exposure boundaries.",
+      "applicability": {
+        "facts_any": [
+          "uses_ai"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.ai_inventory"
+      ],
+      "checks": [
+        "Detect providers/routes/config and record data exposure boundaries."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: AI providers, models and data flows are inventoried?"
+      ],
+      "pass_condition": "AI provider/model references and AI data-flow/privacy documentation signals are both present.",
+      "partial_condition": "AI usage/provider evidence exists but provider/model/data-flow inventory evidence is incomplete.",
+      "fail_condition": "AI usage is detected without an explicit provider/model/data-flow inventory.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-AI-002",
+      "title": "Prompt/tool injection risks are modeled and tested",
+      "domain": "ai",
+      "description": "Test untrusted input crossing prompt/tool boundaries.",
+      "applicability": {
+        "facts_any": [
+          "uses_ai"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Test untrusted input crossing prompt/tool boundaries."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Prompt/tool injection risks are modeled and tested?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Prompt/tool injection risks are modeled and tested\" for the applicable scope; the review/test addresses this check: Test untrusted input crossing prompt/tool boundaries; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Prompt/tool injection risks are modeled and tested\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Test untrusted input crossing prompt/tool boundaries.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Prompt/tool injection risks are modeled and tested\", the required capability is materially absent, or the check cannot be demonstrated after review: Test untrusted input crossing prompt/tool boundaries.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-AI-003",
+      "title": "Model quality has task-specific evals and failure taxonomy",
+      "domain": "ai",
+      "description": "Require representative evals, not generic benchmark claims.",
+      "applicability": {
+        "facts_any": [
+          "uses_ai"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Require representative evals, not generic benchmark claims."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Model quality has task-specific evals and failure taxonomy?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Model quality has task-specific evals and failure taxonomy\" for the applicable scope; the review/test addresses this check: Require representative evals, not generic benchmark claims; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Model quality has task-specific evals and failure taxonomy\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require representative evals, not generic benchmark claims.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Model quality has task-specific evals and failure taxonomy\", the required capability is materially absent, or the check cannot be demonstrated after review: Require representative evals, not generic benchmark claims.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-AI-004",
+      "title": "Grounding, uncertainty or abstention is handled where needed",
+      "domain": "ai",
+      "description": "Assess hallucination-sensitive flows and fallback behavior.",
+      "applicability": {
+        "facts_any": [
+          "uses_ai"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Assess hallucination-sensitive flows and fallback behavior."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Grounding, uncertainty or abstention is handled where needed?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Grounding, uncertainty or abstention is handled where needed\" for the applicable scope; the review/test addresses this check: Assess hallucination-sensitive flows and fallback behavior; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Grounding, uncertainty or abstention is handled where needed\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Assess hallucination-sensitive flows and fallback behavior.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Grounding, uncertainty or abstention is handled where needed\", the required capability is materially absent, or the check cannot be demonstrated after review: Assess hallucination-sensitive flows and fallback behavior.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-AI-005",
+      "title": "AI cost, rate and provider failure guardrails exist",
+      "domain": "ai",
+      "description": "Check budgets, timeouts, retries, quotas and provider fallback.",
+      "applicability": {
+        "facts_any": [
+          "uses_ai"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check budgets, timeouts, retries, quotas and provider fallback."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: AI cost, rate and provider failure guardrails exist?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"AI cost, rate and provider failure guardrails exist\" for the applicable scope; the review/test addresses this check: Check budgets, timeouts, retries, quotas and provider fallback; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"AI cost, rate and provider failure guardrails exist\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check budgets, timeouts, retries, quotas and provider fallback.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"AI cost, rate and provider failure guardrails exist\", the required capability is materially absent, or the check cannot be demonstrated after review: Check budgets, timeouts, retries, quotas and provider fallback.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-AI-006",
+      "title": "High-impact AI actions require suitable human control",
+      "domain": "ai",
+      "description": "Review approval boundaries for consequential or destructive actions.",
+      "applicability": {
+        "facts_any": [
+          "uses_ai"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Review approval boundaries for consequential or destructive actions."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: High-impact AI actions require suitable human control?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"High-impact AI actions require suitable human control\" for the applicable scope; the review/test addresses this check: Review approval boundaries for consequential or destructive actions; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"High-impact AI actions require suitable human control\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Review approval boundaries for consequential or destructive actions.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"High-impact AI actions require suitable human control\", the required capability is materially absent, or the check cannot be demonstrated after review: Review approval boundaries for consequential or destructive actions.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

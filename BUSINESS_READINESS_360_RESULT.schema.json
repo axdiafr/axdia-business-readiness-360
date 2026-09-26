@@ -1,0 +1,579 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "BUSINESS_READINESS_360_RESULT.schema.json",
+  "title": "Business Readiness 360 Result V3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "pack_version",
+    "audit",
+    "project_profile",
+    "applicability",
+    "evaluations",
+    "evidence",
+    "coverage",
+    "scores",
+    "maturity",
+    "findings",
+    "actions",
+    "blockers",
+    "audit_self_evaluation",
+    "final",
+    "extensions"
+  ],
+  "properties": {
+    "schema": {
+      "const": "BR360-3"
+    },
+    "pack_version": {
+      "const": "3.0.0"
+    },
+    "audit": {
+      "type": "object",
+      "required": [
+        "id",
+        "mode",
+        "profile"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "mode": {
+          "const": "READ_ONLY"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "network_intent": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "project_profile": {
+      "type": "object"
+    },
+    "applicability": {
+      "type": "object"
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "automated",
+        "manual",
+        "real_world",
+        "overall"
+      ],
+      "properties": {
+        "automated": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "manual": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "real_world": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "overall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "implementation",
+        "verification",
+        "real_world_evidence",
+        "readiness",
+        "confidence",
+        "evidence_strength"
+      ],
+      "properties": {
+        "implementation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "verification": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "real_world_evidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "readiness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "evidence_strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        }
+      },
+      "additionalProperties": false
+    },
+    "maturity": {
+      "type": "object",
+      "required": [
+        "level",
+        "name"
+      ],
+      "properties": {
+        "level": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "name": {
+          "enum": [
+            "ABSENT",
+            "AD_HOC",
+            "REPEATABLE",
+            "DEFINED",
+            "MEASURED",
+            "OPTIMIZED"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "audit_self_evaluation": {
+      "type": "object",
+      "required": [
+        "audit_coverage",
+        "audit_confidence",
+        "missing_tools",
+        "missing_access",
+        "missing_real_world_data",
+        "unverified_assumptions",
+        "license_review_gaps"
+      ],
+      "properties": {
+        "audit_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "audit_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "missing_tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_access": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_real_world_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unverified_assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "license_review_gaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "final": {
+      "type": "object",
+      "required": [
+        "status",
+        "summary"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "FAIL",
+            "BLOCKED"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "evaluations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "control_id",
+          "domain",
+          "title",
+          "applicability",
+          "automation",
+          "status",
+          "evidence_level",
+          "evidence",
+          "summary",
+          "source_method"
+        ],
+        "properties": {
+          "control_id": {
+            "type": "string",
+            "pattern": "^BR360-[A-Z0-9]+-[0-9]{3}$"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "applicability": {
+            "enum": [
+              "REQUIRED",
+              "RECOMMENDED",
+              "OPTIONAL",
+              "NOT_APPLICABLE",
+              "UNKNOWN"
+            ]
+          },
+          "automation": {
+            "enum": [
+              "AUTOMATED",
+              "SEMI_AUTOMATED",
+              "MANUAL",
+              "REAL_WORLD_REQUIRED",
+              "EXTERNAL_RESEARCH",
+              "LEGAL_REVIEW"
+            ]
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "PARTIAL",
+              "FAIL",
+              "NOT_TESTED",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "evidence_level": {
+            "enum": [
+              "E0_CLAIM_ONLY",
+              "E1_STATIC",
+              "E2_TESTED",
+              "E3_RUNTIME",
+              "E4_REAL_WORLD"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/evidence"
+            }
+          },
+          "summary": {
+            "type": "string"
+          },
+          "source_method": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "level",
+        "source",
+        "summary",
+        "freshness",
+        "authority",
+        "confidence"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "level": {
+          "enum": [
+            "E0_CLAIM_ONLY",
+            "E1_STATIC",
+            "E2_TESTED",
+            "E3_RUNTIME",
+            "E4_REAL_WORLD"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "digest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "freshness": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "audit_domain",
+        "control_id",
+        "title",
+        "description",
+        "severity",
+        "confidence",
+        "applicability",
+        "evidence_level",
+        "evidence",
+        "affected_asset",
+        "business_impact",
+        "technical_impact",
+        "operational_impact",
+        "remediation",
+        "estimated_effort",
+        "automation_level",
+        "source_method",
+        "standard_refs",
+        "fingerprint",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "audit_domain": {
+          "type": "string"
+        },
+        "control_id": {
+          "type": "string",
+          "pattern": "^BR360-[A-Z0-9]+-[0-9]{3}$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "INFO",
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "applicability": {
+          "enum": [
+            "REQUIRED",
+            "RECOMMENDED",
+            "OPTIONAL",
+            "NOT_APPLICABLE",
+            "UNKNOWN"
+          ]
+        },
+        "evidence_level": {
+          "enum": [
+            "E0_CLAIM_ONLY",
+            "E1_STATIC",
+            "E2_TESTED",
+            "E3_RUNTIME",
+            "E4_REAL_WORLD"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "affected_asset": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "business_impact": {
+          "type": "string"
+        },
+        "technical_impact": {
+          "type": "string"
+        },
+        "operational_impact": {
+          "type": "string"
+        },
+        "remediation": {
+          "type": "string"
+        },
+        "estimated_effort": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "automation_level": {
+          "enum": [
+            "AUTOMATED",
+            "SEMI_AUTOMATED",
+            "MANUAL",
+            "REAL_WORLD_REQUIRED",
+            "EXTERNAL_RESEARCH",
+            "LEGAL_REVIEW"
+          ]
+        },
+        "source_method": {
+          "type": "string"
+        },
+        "standard_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fingerprint": {
+          "type": "string"
+        },
+        "first_seen": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_seen": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "OPEN",
+            "ACKNOWLEDGED",
+            "RESOLVED",
+            "SUPPRESSED",
+            "FALSE_POSITIVE",
+            "NOT_APPLICABLE"
+          ]
+        }
+      }
+    }
+  }
+}

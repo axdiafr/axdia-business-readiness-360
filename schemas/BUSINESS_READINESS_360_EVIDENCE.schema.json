@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "BUSINESS_READINESS_360_EVIDENCE.schema.json",
+  "title": "BR360 Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "level",
+    "source",
+    "summary",
+    "freshness",
+    "authority",
+    "confidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "level": {
+      "enum": [
+        "E0_CLAIM_ONLY",
+        "E1_STATIC",
+        "E2_TESTED",
+        "E3_RUNTIME",
+        "E4_REAL_WORLD"
+      ]
+    },
+    "source": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "digest": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "freshness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "location": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

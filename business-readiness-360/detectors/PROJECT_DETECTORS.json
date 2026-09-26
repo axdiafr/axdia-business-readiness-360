@@ -1,0 +1,338 @@
+{
+  "schema": "BR360-DETECTORS-2",
+  "facts": [
+    {
+      "fact": "language.javascript",
+      "evidence": [
+        {
+          "path": "package.json"
+        },
+        {
+          "path": "*.js"
+        },
+        {
+          "path": "*.ts"
+        }
+      ]
+    },
+    {
+      "fact": "language.python",
+      "evidence": [
+        {
+          "path": "pyproject.toml"
+        },
+        {
+          "path": "requirements.txt"
+        },
+        {
+          "path": "*.py"
+        }
+      ]
+    },
+    {
+      "fact": "language.go",
+      "evidence": [
+        {
+          "path": "go.mod"
+        }
+      ]
+    },
+    {
+      "fact": "language.rust",
+      "evidence": [
+        {
+          "path": "Cargo.toml"
+        }
+      ]
+    },
+    {
+      "fact": "has_web_ui",
+      "evidence": [
+        {
+          "path": "index.html"
+        },
+        {
+          "dependency": "react"
+        },
+        {
+          "dependency": "next"
+        },
+        {
+          "dependency": "vue"
+        },
+        {
+          "dependency": "svelte"
+        }
+      ]
+    },
+    {
+      "fact": "has_human_ui",
+      "evidence": [
+        {
+          "path": "index.html"
+        },
+        {
+          "path": "src/pages"
+        },
+        {
+          "path": "app"
+        },
+        {
+          "path": "public"
+        }
+      ]
+    },
+    {
+      "fact": "has_api",
+      "evidence": [
+        {
+          "path": "openapi.yaml"
+        },
+        {
+          "path": "openapi.json"
+        },
+        {
+          "route": "/api/"
+        },
+        {
+          "dependency": "express"
+        },
+        {
+          "dependency": "fastapi"
+        }
+      ]
+    },
+    {
+      "fact": "has_event_api",
+      "evidence": [
+        {
+          "path": "asyncapi.yaml"
+        },
+        {
+          "path": "asyncapi.json"
+        }
+      ]
+    },
+    {
+      "fact": "has_auth",
+      "evidence": [
+        {
+          "dependency": "@supabase/supabase-js"
+        },
+        {
+          "dependency": "firebase"
+        },
+        {
+          "dependency": "next-auth"
+        },
+        {
+          "path": "auth"
+        }
+      ]
+    },
+    {
+      "fact": "has_billing",
+      "evidence": [
+        {
+          "dependency": "stripe"
+        },
+        {
+          "path": "billing"
+        }
+      ]
+    },
+    {
+      "fact": "has_database",
+      "evidence": [
+        {
+          "dependency": "prisma"
+        },
+        {
+          "dependency": "sequelize"
+        },
+        {
+          "path": "migrations"
+        },
+        {
+          "path": "supabase"
+        }
+      ]
+    },
+    {
+      "fact": "has_ci",
+      "evidence": [
+        {
+          "path": ".github/workflows"
+        },
+        {
+          "path": ".gitlab-ci.yml"
+        }
+      ]
+    },
+    {
+      "fact": "has_containers",
+      "evidence": [
+        {
+          "path": "Dockerfile"
+        },
+        {
+          "path": "docker-compose.yml"
+        },
+        {
+          "path": "compose.yaml"
+        }
+      ]
+    },
+    {
+      "fact": "has_iac",
+      "evidence": [
+        {
+          "path": "*.tf"
+        },
+        {
+          "path": "pulumi"
+        },
+        {
+          "path": "helm"
+        }
+      ]
+    },
+    {
+      "fact": "uses_ai",
+      "evidence": [
+        {
+          "dependency": "openai"
+        },
+        {
+          "dependency": "anthropic"
+        },
+        {
+          "path": "prompts"
+        },
+        {
+          "path": "agents"
+        }
+      ]
+    },
+    {
+      "fact": "has_analytics",
+      "evidence": [
+        {
+          "dependency": "posthog-js"
+        },
+        {
+          "dependency": "@vercel/analytics"
+        },
+        {
+          "path": "analytics"
+        }
+      ]
+    },
+    {
+      "fact": "has_observability",
+      "evidence": [
+        {
+          "dependency": "@opentelemetry/api"
+        },
+        {
+          "dependency": "sentry"
+        },
+        {
+          "path": "prometheus.yml"
+        }
+      ]
+    },
+    {
+      "fact": "has_mobile",
+      "evidence": [
+        {
+          "path": "android"
+        },
+        {
+          "path": "ios"
+        },
+        {
+          "dependency": "@capacitor/core"
+        }
+      ]
+    },
+    {
+      "fact": "has_desktop",
+      "evidence": [
+        {
+          "dependency": "electron"
+        },
+        {
+          "path": "src-tauri"
+        }
+      ]
+    },
+    {
+      "fact": "has_cli",
+      "evidence": [
+        {
+          "path": "bin"
+        },
+        {
+          "manifest": "package.json#bin"
+        }
+      ]
+    },
+    {
+      "fact": "open_source",
+      "evidence": [
+        {
+          "path": "LICENSE"
+        },
+        {
+          "path": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "fact": "multi_tenant",
+      "evidence": [
+        {
+          "pattern": "organization_id"
+        },
+        {
+          "pattern": "tenant_id"
+        },
+        {
+          "pattern": "workspace_id"
+        }
+      ]
+    },
+    {
+      "fact": "has_entitlements",
+      "evidence": [
+        {
+          "pattern": "entitlement"
+        },
+        {
+          "pattern": "subscription"
+        },
+        {
+          "pattern": "plan_id"
+        }
+      ]
+    },
+    {
+      "fact": "production_service",
+      "evidence": [
+        {
+          "path": "vercel.json"
+        },
+        {
+          "path": "railway.json"
+        },
+        {
+          "path": "render.yaml"
+        },
+        {
+          "path": "fly.toml"
+        }
+      ]
+    }
+  ]
+}

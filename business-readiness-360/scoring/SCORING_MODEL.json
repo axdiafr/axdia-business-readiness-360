@@ -1,0 +1,45 @@
+{
+  "schema": "BR360-SCORING-3",
+  "scores": [
+    "IMPLEMENTATION_SCORE",
+    "VERIFICATION_SCORE",
+    "REAL_WORLD_EVIDENCE_SCORE",
+    "READINESS_SCORE"
+  ],
+  "scale": "0..10",
+  "status_values": {
+    "PASS": 1.0,
+    "PARTIAL": 0.5,
+    "FAIL": 0.0
+  },
+  "excluded_statuses": [
+    "NOT_APPLICABLE"
+  ],
+  "unknown_policy": "UNKNOWN/NOT_TESTED never counts as PASS and reduces coverage.",
+  "readiness_formula": "0.45*implementation + 0.30*verification + 0.25*real_world when real-world controls apply; otherwise weights renormalize.",
+  "gates": [
+    {
+      "if": "real_world_controls_apply and REAL_WORLD_EVIDENCE_SCORE == 0",
+      "readiness_cap": 6.5
+    },
+    {
+      "if": "VERIFICATION_SCORE < 5",
+      "readiness_cap": 7.5
+    },
+    {
+      "if": "COVERAGE < 0.70",
+      "readiness_cap": 8.0
+    }
+  ],
+  "separate_dimensions": [
+    "CONFIDENCE",
+    "EVIDENCE_STRENGTH",
+    "COVERAGE"
+  ],
+  "principle": "Excellent implementation without real-user evidence cannot produce 10/10 business readiness.",
+  "v3_dimensions": {
+    "confidence": "coverage weighted by evidence confidence",
+    "evidence_strength": "average E0..E4 level normalized to 0..10",
+    "maturity": "separate gated level 0..5"
+  }
+}

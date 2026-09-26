@@ -1,0 +1,226 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "api",
+  "controls": [
+    {
+      "id": "BR360-API-001",
+      "title": "Machine-readable API contract exists when API is public or shared",
+      "domain": "api",
+      "description": "Detect OpenAPI/AsyncAPI or equivalent contract.",
+      "applicability": {
+        "facts_any": [
+          "has_api",
+          "has_event_api"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.api_contract"
+      ],
+      "checks": [
+        "Detect OpenAPI/AsyncAPI or equivalent contract."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Machine-readable API contract exists when API is public or shared?"
+      ],
+      "pass_condition": "A recognizable OpenAPI, Swagger, or AsyncAPI machine-readable contract exists.",
+      "partial_condition": "A candidate contract exists but cannot be recognized/validated sufficiently.",
+      "fail_condition": "An API surface is detected without a recognizable machine-readable contract.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENAPI-SPECIFICATION",
+        "REF-ASYNCAPI-SPEC",
+        "REF-SPECTRAL",
+        "REF-SCHEMATHESIS",
+        "REF-PACT-JS"
+      ]
+    },
+    {
+      "id": "BR360-API-002",
+      "title": "API contract passes lint and schema checks",
+      "domain": "api",
+      "description": "Use Spectral/schema validation when available.",
+      "applicability": {
+        "facts_any": [
+          "has_api",
+          "has_event_api"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Use Spectral/schema validation when available."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: API contract passes lint and schema checks?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"API contract passes lint and schema checks\" for the applicable scope; the review/test addresses this check: Use Spectral/schema validation when available; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"API contract passes lint and schema checks\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use Spectral/schema validation when available.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"API contract passes lint and schema checks\", the required capability is materially absent, or the check cannot be demonstrated after review: Use Spectral/schema validation when available.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENAPI-SPECIFICATION",
+        "REF-ASYNCAPI-SPEC",
+        "REF-SPECTRAL",
+        "REF-SCHEMATHESIS",
+        "REF-PACT-JS"
+      ]
+    },
+    {
+      "id": "BR360-API-003",
+      "title": "Runtime responses conform to declared schema",
+      "domain": "api",
+      "description": "Exercise representative operations and validate response conformance.",
+      "applicability": {
+        "facts_any": [
+          "has_api",
+          "has_event_api"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Exercise representative operations and validate response conformance."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Runtime responses conform to declared schema?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Runtime responses conform to declared schema\" for the applicable scope; the review/test addresses this check: Exercise representative operations and validate response conformance; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Runtime responses conform to declared schema\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Exercise representative operations and validate response conformance.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Runtime responses conform to declared schema\", the required capability is materially absent, or the check cannot be demonstrated after review: Exercise representative operations and validate response conformance.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENAPI-SPECIFICATION",
+        "REF-ASYNCAPI-SPEC",
+        "REF-SPECTRAL",
+        "REF-SCHEMATHESIS",
+        "REF-PACT-JS"
+      ]
+    },
+    {
+      "id": "BR360-API-004",
+      "title": "Breaking changes are detected against a baseline",
+      "domain": "api",
+      "description": "Classify NO_CHANGE/COMPATIBLE/POTENTIALLY_BREAKING/BREAKING/UNKNOWN.",
+      "applicability": {
+        "facts_any": [
+          "has_api",
+          "has_event_api"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.api_breaking_baseline"
+      ],
+      "checks": [
+        "Classify NO_CHANGE/COMPATIBLE/POTENTIALLY_BREAKING/BREAKING/UNKNOWN."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Breaking changes are detected against a baseline?"
+      ],
+      "pass_condition": "Breaking-change tooling/config and an API baseline artifact are both present.",
+      "partial_condition": "Only breaking-change tooling/config or an API baseline artifact is present.",
+      "fail_condition": "An API surface exists without recognizable breaking-change comparison tooling/baseline.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENAPI-SPECIFICATION",
+        "REF-ASYNCAPI-SPEC",
+        "REF-SPECTRAL",
+        "REF-SCHEMATHESIS",
+        "REF-PACT-JS"
+      ]
+    },
+    {
+      "id": "BR360-API-005",
+      "title": "Consumer/provider or property-based contract tests exist where valuable",
+      "domain": "api",
+      "description": "Use Pact/Schemathesis-style evidence when applicable.",
+      "applicability": {
+        "facts_any": [
+          "has_api",
+          "has_event_api"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Use Pact/Schemathesis-style evidence when applicable."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Consumer/provider or property-based contract tests exist where valuable?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Consumer/provider or property-based contract tests exist where valuable\" for the applicable scope; the review/test addresses this check: Use Pact/Schemathesis-style evidence when applicable; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Consumer/provider or property-based contract tests exist where valuable\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use Pact/Schemathesis-style evidence when applicable.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Consumer/provider or property-based contract tests exist where valuable\", the required capability is materially absent, or the check cannot be demonstrated after review: Use Pact/Schemathesis-style evidence when applicable.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENAPI-SPECIFICATION",
+        "REF-ASYNCAPI-SPEC",
+        "REF-SPECTRAL",
+        "REF-SCHEMATHESIS",
+        "REF-PACT-JS"
+      ]
+    },
+    {
+      "id": "BR360-API-006",
+      "title": "API errors and authorization semantics are explicit",
+      "domain": "api",
+      "description": "Review status/error model, auth requirements and rate/abuse limits.",
+      "applicability": {
+        "facts_any": [
+          "has_api",
+          "has_event_api"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Review status/error model, auth requirements and rate/abuse limits."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: API errors and authorization semantics are explicit?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"API errors and authorization semantics are explicit\" for the applicable scope; the review/test addresses this check: Review status/error model, auth requirements and rate/abuse limits; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"API errors and authorization semantics are explicit\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Review status/error model, auth requirements and rate/abuse limits.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"API errors and authorization semantics are explicit\", the required capability is materially absent, or the check cannot be demonstrated after review: Review status/error model, auth requirements and rate/abuse limits.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENAPI-SPECIFICATION",
+        "REF-ASYNCAPI-SPEC",
+        "REF-SPECTRAL",
+        "REF-SCHEMATHESIS",
+        "REF-PACT-JS"
+      ]
+    }
+  ]
+}

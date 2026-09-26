@@ -1,0 +1,138 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "data",
+  "controls": [
+    {
+      "id": "BR360-DATA-001",
+      "title": "Data schemas and invariants are explicit",
+      "domain": "data",
+      "description": "Detect schemas/migrations/contracts and record core invariants.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.data_schema"
+      ],
+      "checks": [
+        "Detect schemas/migrations/contracts and record core invariants."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Data schemas and invariants are explicit?"
+      ],
+      "pass_condition": "Schema/model/migration artifacts and explicit invariant/validation signals are both present.",
+      "partial_condition": "Schema/model/migration artifacts are present but invariant evidence is incomplete.",
+      "fail_condition": "A backend/persistent-data surface is detected without recognizable schema/model/migration artifacts.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-DATA-002",
+      "title": "Migrations are versioned and recoverable",
+      "domain": "data",
+      "description": "Check forward/rollback strategy or compensating recovery.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check forward/rollback strategy or compensating recovery."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Migrations are versioned and recoverable?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Migrations are versioned and recoverable\" for the applicable scope; the review/test addresses this check: Check forward/rollback strategy or compensating recovery; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Migrations are versioned and recoverable\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check forward/rollback strategy or compensating recovery.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Migrations are versioned and recoverable\", the required capability is materially absent, or the check cannot be demonstrated after review: Check forward/rollback strategy or compensating recovery.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-DATA-003",
+      "title": "Backups are restorable, not merely configured",
+      "domain": "data",
+      "description": "Require restore evidence for production data where applicable.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "CRITICAL",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Require restore evidence for production data where applicable."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Backups are restorable, not merely configured?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Backups are restorable, not merely configured\" for the applicable scope; the review/test addresses this check: Require restore evidence for production data where applicable; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Backups are restorable, not merely configured\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require restore evidence for production data where applicable.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Backups are restorable, not merely configured\", the required capability is materially absent, or the check cannot be demonstrated after review: Require restore evidence for production data where applicable.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-DATA-004",
+      "title": "Idempotency and integrity are tested for critical writes",
+      "domain": "data",
+      "description": "Exercise retries/duplicates and validate integrity constraints.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Exercise retries/duplicates and validate integrity constraints."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Idempotency and integrity are tested for critical writes?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Idempotency and integrity are tested for critical writes\" for the applicable scope; the review/test addresses this check: Exercise retries/duplicates and validate integrity constraints; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Idempotency and integrity are tested for critical writes\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Exercise retries/duplicates and validate integrity constraints.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Idempotency and integrity are tested for critical writes\", the required capability is materially absent, or the check cannot be demonstrated after review: Exercise retries/duplicates and validate integrity constraints.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-DATA-005",
+      "title": "Data ownership and lineage are documented for critical datasets",
+      "domain": "data",
+      "description": "Record producer, consumer, retention and transformation ownership.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Record producer, consumer, retention and transformation ownership."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Data ownership and lineage are documented for critical datasets?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Data ownership and lineage are documented for critical datasets\" for the applicable scope; the review/test addresses this check: Record producer, consumer, retention and transformation ownership; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Data ownership and lineage are documented for critical datasets\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Record producer, consumer, retention and transformation ownership.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Data ownership and lineage are documented for critical datasets\", the required capability is materially absent, or the check cannot be demonstrated after review: Record producer, consumer, retention and transformation ownership.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

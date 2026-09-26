@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+br360-result*.json
+audit-before.json
+audit-after.json
+audit-delta.json

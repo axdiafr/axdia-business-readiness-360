@@ -1,0 +1,506 @@
+{
+  "fixture": "ai-app",
+  "profile": "AUTO",
+  "selected": [
+    {
+      "control_id": "BR360-PROD-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-PROD-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-PROD-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-PROD-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-PROD-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-UX-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-UX-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-UX-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-UX-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-UX-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-A11Y-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-A11Y-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-A11Y-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-A11Y-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-A11Y-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-PERF-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-PERF-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-PERF-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-PERF-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-PERF-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-SEC-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SEC-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SEC-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SEC-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SEC-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SEC-006",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SC-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SC-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SC-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SC-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SC-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SC-006",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-API-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-API-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-API-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-API-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-API-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-API-006",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-AUTHZ-001",
+      "applicability": "NOT_APPLICABLE"
+    },
+    {
+      "control_id": "BR360-AUTHZ-002",
+      "applicability": "NOT_APPLICABLE"
+    },
+    {
+      "control_id": "BR360-AUTHZ-003",
+      "applicability": "NOT_APPLICABLE"
+    },
+    {
+      "control_id": "BR360-AUTHZ-004",
+      "applicability": "NOT_APPLICABLE"
+    },
+    {
+      "control_id": "BR360-AUTHZ-005",
+      "applicability": "NOT_APPLICABLE"
+    },
+    {
+      "control_id": "BR360-PRIV-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-PRIV-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-PRIV-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-PRIV-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-PRIV-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-AI-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-AI-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-AI-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-AI-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-AI-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-AI-006",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-DATA-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DATA-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DATA-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DATA-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DATA-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-RUN-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RUN-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RUN-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RUN-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RUN-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-SRE-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-SRE-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-SRE-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-SRE-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-SRE-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-OBS-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-OBS-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-OBS-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-OBS-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-OBS-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RES-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RES-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RES-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RES-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RES-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-ANA-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-ANA-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-ANA-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-ANA-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-ANA-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-EXP-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-EXP-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-EXP-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-EXP-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-EXP-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-BIZ-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-BIZ-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-BIZ-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-BIZ-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-BIZ-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-BIZ-006",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-GROW-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-GROW-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-GROW-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-GROW-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-GROW-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RET-001",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RET-002",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RET-003",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RET-004",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-RET-005",
+      "applicability": "REQUIRED"
+    },
+    {
+      "control_id": "BR360-SCALE-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SCALE-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SCALE-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SCALE-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-SCALE-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DOC-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DOC-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DOC-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DOC-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-DOC-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-LIC-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-LIC-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-LIC-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-LIC-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-LIC-005",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-ARCH-001",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-ARCH-002",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-ARCH-003",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-ARCH-004",
+      "applicability": "RECOMMENDED"
+    },
+    {
+      "control_id": "BR360-ARCH-005",
+      "applicability": "RECOMMENDED"
+    }
+  ]
+}

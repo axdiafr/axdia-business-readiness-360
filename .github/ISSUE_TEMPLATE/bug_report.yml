@@ -1,0 +1,25 @@
+name: Bug report
+description: Report reproducible BR360 engine behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: Use a synthetic/minimal fixture. Do not attach private source or secrets.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: BR360 version
+      placeholder: "3.0.0"
+    validations:
+      required: true

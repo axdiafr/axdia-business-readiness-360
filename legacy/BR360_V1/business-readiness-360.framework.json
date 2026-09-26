@@ -1,0 +1,71 @@
+{
+  "id": "business-readiness-360",
+  "version": 1,
+  "detect": [
+    {
+      "path": "package.json"
+    },
+    {
+      "path": "pyproject.toml"
+    },
+    {
+      "path": "requirements.txt"
+    },
+    {
+      "path": "setup.py"
+    },
+    {
+      "path": "go.mod"
+    },
+    {
+      "path": "Cargo.toml"
+    },
+    {
+      "path": "pom.xml"
+    },
+    {
+      "path": "build.gradle"
+    },
+    {
+      "path": "composer.json"
+    },
+    {
+      "path": "Gemfile"
+    },
+    {
+      "path": "*.csproj"
+    },
+    {
+      "path": "*.sln"
+    },
+    {
+      "path": "index.html"
+    },
+    {
+      "path": "Dockerfile"
+    },
+    {
+      "path": "docker-compose.yml"
+    },
+    {
+      "path": "README.md"
+    }
+  ],
+  "files": [],
+  "checks": [
+    "syntax",
+    "contracts",
+    "security",
+    "supply-chain",
+    "data",
+    "performance",
+    "business-readiness-360"
+  ],
+  "risks": [
+    "Audit conclusions must distinguish code evidence from real-world business evidence",
+    "Do not execute paid, destructive, production, billing, or customer-contact actions",
+    "Legal and compliance findings may require professional review",
+    "Not-applicable domains must be excluded from scoring rather than scored as failures"
+  ],
+  "test_commands": []
+}

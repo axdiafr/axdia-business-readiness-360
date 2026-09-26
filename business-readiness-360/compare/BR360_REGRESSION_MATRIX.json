@@ -1,0 +1,58 @@
+{
+  "schema": "BR360-REGRESSION-3",
+  "before_version": "2.0.0",
+  "after_version": "3.0.0",
+  "dimensions": [
+    {
+      "dimension": "controls",
+      "before": "125 stable controls; AUTOMATED controls were declarative",
+      "after": "125 stable controls; 15/15 AUTOMATED controls have executable built-in detectors",
+      "status": "PRESERVED_AND_EXTENDED"
+    },
+    {
+      "dimension": "applicability",
+      "before": "20 profiles + project facts + deterministic golden selection",
+      "after": "same public selection behavior preserved",
+      "status": "PRESERVED"
+    },
+    {
+      "dimension": "execution",
+      "before": "pre-analysis only",
+      "after": "read-only audit execution with normalized evaluations/evidence/findings/actions",
+      "status": "EXTENDED"
+    },
+    {
+      "dimension": "evidence",
+      "before": "evidence graph and schema",
+      "after": "evidence graph + generated evidence + external evidence import E0..E4",
+      "status": "PRESERVED_AND_EXTENDED"
+    },
+    {
+      "dimension": "scoring",
+      "before": "implementation/verification/real-world/readiness + gates",
+      "after": "same readiness model + confidence + evidence strength + computed maturity",
+      "status": "PRESERVED_AND_EXTENDED"
+    },
+    {
+      "dimension": "comparison",
+      "before": "Python compare helper",
+      "after": "helper preserved + CLI compare + maturity delta",
+      "status": "PRESERVED_AND_EXTENDED"
+    },
+    {
+      "dimension": "adapters",
+      "before": "11 command candidates",
+      "after": "11 discovered/versioned adapters + explicit opt-in local-safe execution path",
+      "status": "PRESERVED_AND_EXTENDED"
+    },
+    {
+      "dimension": "safety",
+      "before": "READ_ONLY + explicit network intent",
+      "after": "READ_ONLY + no dependency install + no implicit network + explicit adapter opt-in",
+      "status": "PRESERVED_AND_EXTENDED"
+    }
+  ],
+  "v1_preserved": true,
+  "v2_preserved": true,
+  "integration_regression_status": "FRAMEWORK_TESTED; LIVE_AXDIA_REPOSITORY_NOT_INCLUDED_IN_THIS_PACK"
+}

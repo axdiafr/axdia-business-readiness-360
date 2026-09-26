@@ -1,0 +1,136 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "privacy",
+  "controls": [
+    {
+      "id": "BR360-PRIV-001",
+      "title": "Personal/sensitive data inventory exists",
+      "domain": "privacy",
+      "description": "Identify data categories, purposes, sources, destinations and owners.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Identify data categories, purposes, sources, destinations and owners."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Personal/sensitive data inventory exists?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Personal/sensitive data inventory exists\" for the applicable scope; the review/test addresses this check: Identify data categories, purposes, sources, destinations and owners; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Personal/sensitive data inventory exists\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Identify data categories, purposes, sources, destinations and owners.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Personal/sensitive data inventory exists\", the required capability is materially absent, or the check cannot be demonstrated after review: Identify data categories, purposes, sources, destinations and owners.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-PRIV-002",
+      "title": "Data minimization and purpose limitation are evidenced",
+      "domain": "privacy",
+      "description": "Confirm collected fields are necessary for declared purposes.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Confirm collected fields are necessary for declared purposes."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Data minimization and purpose limitation are evidenced?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Data minimization and purpose limitation are evidenced\" for the applicable scope; the review/test addresses this check: Confirm collected fields are necessary for declared purposes; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Data minimization and purpose limitation are evidenced\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Confirm collected fields are necessary for declared purposes.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Data minimization and purpose limitation are evidenced\", the required capability is materially absent, or the check cannot be demonstrated after review: Confirm collected fields are necessary for declared purposes.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-PRIV-003",
+      "title": "Retention and deletion rules are implemented where applicable",
+      "domain": "privacy",
+      "description": "Verify lifecycle, deletion and archival behavior.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Verify lifecycle, deletion and archival behavior."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Retention and deletion rules are implemented where applicable?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Retention and deletion rules are implemented where applicable\" for the applicable scope; the review/test addresses this check: Verify lifecycle, deletion and archival behavior; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Retention and deletion rules are implemented where applicable\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Verify lifecycle, deletion and archival behavior.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Retention and deletion rules are implemented where applicable\", the required capability is materially absent, or the check cannot be demonstrated after review: Verify lifecycle, deletion and archival behavior.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-PRIV-004",
+      "title": "Consent/legal-basis obligations are identified by jurisdiction",
+      "domain": "privacy",
+      "description": "Do not infer legal compliance; record applicable obligations and review gaps.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "LEGAL_REVIEW",
+      "detectors": [],
+      "checks": [
+        "Do not infer legal compliance; record applicable obligations and review gaps."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Consent/legal-basis obligations are identified by jurisdiction?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Consent/legal-basis obligations are identified by jurisdiction\" for the applicable scope; the review/test addresses this check: Do not infer legal compliance; record applicable obligations and review gaps; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Consent/legal-basis obligations are identified by jurisdiction\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Do not infer legal compliance; record applicable obligations and review gaps.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Consent/legal-basis obligations are identified by jurisdiction\", the required capability is materially absent, or the check cannot be demonstrated after review: Do not infer legal compliance; record applicable obligations and review gaps.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-PRIV-005",
+      "title": "Sensitive data is excluded from logs/telemetry by design",
+      "domain": "privacy",
+      "description": "Inspect logs, traces and error payloads for sensitive leakage.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Inspect logs, traces and error payloads for sensitive leakage."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Sensitive data is excluded from logs/telemetry by design?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Sensitive data is excluded from logs/telemetry by design\" for the applicable scope; the review/test addresses this check: Inspect logs, traces and error payloads for sensitive leakage; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Sensitive data is excluded from logs/telemetry by design\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Inspect logs, traces and error payloads for sensitive leakage.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Sensitive data is excluded from logs/telemetry by design\", the required capability is materially absent, or the check cannot be demonstrated after review: Inspect logs, traces and error payloads for sensitive leakage.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

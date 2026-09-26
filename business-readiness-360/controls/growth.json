@@ -1,0 +1,161 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "growth",
+  "controls": [
+    {
+      "id": "BR360-GROW-001",
+      "title": "Acquisition sources are attributed consistently",
+      "domain": "growth",
+      "description": "Track source/campaign/channel with documented attribution limits.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Track source/campaign/channel with documented attribution limits."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Acquisition sources are attributed consistently?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Acquisition sources are attributed consistently\" for the applicable scope; the review/test addresses this check: Track source/campaign/channel with documented attribution limits; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Acquisition sources are attributed consistently\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Track source/campaign/channel with documented attribution limits.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Acquisition sources are attributed consistently\", the required capability is materially absent, or the check cannot be demonstrated after review: Track source/campaign/channel with documented attribution limits.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-GROW-002",
+      "title": "Visitor-to-value conversion is measured",
+      "domain": "growth",
+      "description": "Use real funnel evidence where growth applies.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Use real funnel evidence where growth applies."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Visitor-to-value conversion is measured?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Visitor-to-value conversion is measured\" for the applicable scope; the review/test addresses this check: Use real funnel evidence where growth applies; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Visitor-to-value conversion is measured\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use real funnel evidence where growth applies.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Visitor-to-value conversion is measured\", the required capability is materially absent, or the check cannot be demonstrated after review: Use real funnel evidence where growth applies.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-GROW-003",
+      "title": "Discoverability/SEO readiness is assessed when public web acquisition applies",
+      "domain": "growth",
+      "description": "Audit indexability, metadata and technical discoverability.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Audit indexability, metadata and technical discoverability."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Discoverability/SEO readiness is assessed when public web acquisition applies?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Discoverability/SEO readiness is assessed when public web acquisition applies\" for the applicable scope; the review/test addresses this check: Audit indexability, metadata and technical discoverability; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Discoverability/SEO readiness is assessed when public web acquisition applies\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Audit indexability, metadata and technical discoverability.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Discoverability/SEO readiness is assessed when public web acquisition applies\", the required capability is materially absent, or the check cannot be demonstrated after review: Audit indexability, metadata and technical discoverability.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-GROW-004",
+      "title": "Growth loops/referrals are measured rather than assumed",
+      "domain": "growth",
+      "description": "Require observed loop behavior before claiming it.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Require observed loop behavior before claiming it."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Growth loops/referrals are measured rather than assumed?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Growth loops/referrals are measured rather than assumed\" for the applicable scope; the review/test addresses this check: Require observed loop behavior before claiming it; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Growth loops/referrals are measured rather than assumed\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require observed loop behavior before claiming it.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Growth loops/referrals are measured rather than assumed\", the required capability is materially absent, or the check cannot be demonstrated after review: Require observed loop behavior before claiming it.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-GROW-005",
+      "title": "Growth experiments are prioritized by evidence and cost",
+      "domain": "growth",
+      "description": "Maintain testable backlog with expected signal and stop criteria.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Maintain testable backlog with expected signal and stop criteria."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Growth experiments are prioritized by evidence and cost?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Growth experiments are prioritized by evidence and cost\" for the applicable scope; the review/test addresses this check: Maintain testable backlog with expected signal and stop criteria; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Growth experiments are prioritized by evidence and cost\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Maintain testable backlog with expected signal and stop criteria.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Growth experiments are prioritized by evidence and cost\", the required capability is materially absent, or the check cannot be demonstrated after review: Maintain testable backlog with expected signal and stop criteria.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "performance",
+  "controls": [
+    {
+      "id": "BR360-PERF-001",
+      "title": "Performance budgets are explicit and versioned",
+      "domain": "performance",
+      "description": "Define budgets for relevant web/API/mobile/desktop metrics.",
+      "applicability": {
+        "facts_any": [
+          "has_web_ui",
+          "has_api",
+          "has_mobile",
+          "has_desktop"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Define budgets for relevant web/API/mobile/desktop metrics."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Performance budgets are explicit and versioned?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Performance budgets are explicit and versioned\" for the applicable scope; the review/test addresses this check: Define budgets for relevant web/API/mobile/desktop metrics; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Performance budgets are explicit and versioned\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Define budgets for relevant web/API/mobile/desktop metrics.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Performance budgets are explicit and versioned\", the required capability is materially absent, or the check cannot be demonstrated after review: Define budgets for relevant web/API/mobile/desktop metrics.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-LIGHTHOUSE",
+        "REF-LIGHTHOUSE-CI",
+        "REF-K6"
+      ]
+    },
+    {
+      "id": "BR360-PERF-002",
+      "title": "Core Web Vitals meet the declared target when web UI applies",
+      "domain": "performance",
+      "description": "Use field evidence when available; lab evidence is not equivalent.",
+      "applicability": {
+        "facts_any": [
+          "has_web_ui",
+          "has_api",
+          "has_mobile",
+          "has_desktop"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Use field evidence when available; lab evidence is not equivalent."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Core Web Vitals meet the declared target when web UI applies?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Core Web Vitals meet the declared target when web UI applies\" for the applicable scope; the review/test addresses this check: Use field evidence when available; lab evidence is not equivalent; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Core Web Vitals meet the declared target when web UI applies\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use field evidence when available; lab evidence is not equivalent.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Core Web Vitals meet the declared target when web UI applies\", the required capability is materially absent, or the check cannot be demonstrated after review: Use field evidence when available; lab evidence is not equivalent.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-LIGHTHOUSE",
+        "REF-LIGHTHOUSE-CI",
+        "REF-K6"
+      ]
+    },
+    {
+      "id": "BR360-PERF-003",
+      "title": "API latency and error-rate budgets are measured when API applies",
+      "domain": "performance",
+      "description": "Measure p95/p99 and error-rate against declared budgets.",
+      "applicability": {
+        "facts_any": [
+          "has_web_ui",
+          "has_api",
+          "has_mobile",
+          "has_desktop"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Measure p95/p99 and error-rate against declared budgets."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: API latency and error-rate budgets are measured when API applies?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"API latency and error-rate budgets are measured when API applies\" for the applicable scope; the review/test addresses this check: Measure p95/p99 and error-rate against declared budgets; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"API latency and error-rate budgets are measured when API applies\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Measure p95/p99 and error-rate against declared budgets.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"API latency and error-rate budgets are measured when API applies\", the required capability is materially absent, or the check cannot be demonstrated after review: Measure p95/p99 and error-rate against declared budgets.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-LIGHTHOUSE",
+        "REF-LIGHTHOUSE-CI",
+        "REF-K6"
+      ]
+    },
+    {
+      "id": "BR360-PERF-004",
+      "title": "Performance regressions are compared against a baseline",
+      "domain": "performance",
+      "description": "Compare repeat runs and flag statistically meaningful regressions.",
+      "applicability": {
+        "facts_any": [
+          "has_web_ui",
+          "has_api",
+          "has_mobile",
+          "has_desktop"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.performance_baseline"
+      ],
+      "checks": [
+        "Compare repeat runs and flag statistically meaningful regressions."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Performance regressions are compared against a baseline?"
+      ],
+      "pass_condition": "Performance tooling/config and a recognizable baseline/budget artifact are both present.",
+      "partial_condition": "Only tooling/config or baseline/budget evidence is present.",
+      "fail_condition": "No recognizable performance regression tooling or baseline/budget artifact is present.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-LIGHTHOUSE",
+        "REF-LIGHTHOUSE-CI",
+        "REF-K6"
+      ]
+    },
+    {
+      "id": "BR360-PERF-005",
+      "title": "Load scenarios represent realistic concurrency or throughput",
+      "domain": "performance",
+      "description": "Use scenario-based load evidence when runtime service applies.",
+      "applicability": {
+        "facts_any": [
+          "has_web_ui",
+          "has_api",
+          "has_mobile",
+          "has_desktop"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Use scenario-based load evidence when runtime service applies."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Load scenarios represent realistic concurrency or throughput?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Load scenarios represent realistic concurrency or throughput\" for the applicable scope; the review/test addresses this check: Use scenario-based load evidence when runtime service applies; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Load scenarios represent realistic concurrency or throughput\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use scenario-based load evidence when runtime service applies.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Load scenarios represent realistic concurrency or throughput\", the required capability is materially absent, or the check cannot be demonstrated after review: Use scenario-based load evidence when runtime service applies.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-LIGHTHOUSE",
+        "REF-LIGHTHOUSE-CI",
+        "REF-K6"
+      ]
+    }
+  ]
+}

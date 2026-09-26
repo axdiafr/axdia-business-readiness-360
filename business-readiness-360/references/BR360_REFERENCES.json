@@ -1,0 +1,869 @@
+{
+  "schema": "BR360-REFERENCES-2",
+  "generated": "2026-09-26",
+  "references": [
+    {
+      "id": "REF-OWASP-ASVS",
+      "repo": "OWASP_ASVS",
+      "url": "https://github.com/OWASP/ASVS.git",
+      "commit": "2b300716ebbef654788d0a14d6c878cecc70c2e9",
+      "license": "CC-BY-SA-4.0",
+      "domain": "01_SECURITY_STANDARDS",
+      "concepts_used": [
+        "control IDs",
+        "verification levels",
+        "applicability",
+        "security requirements"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OWASP-WSTG",
+      "repo": "OWASP_WSTG",
+      "url": "https://github.com/OWASP/wstg.git",
+      "commit": "ea174034f91439a17a1595e57d51e5b461820273",
+      "license": "CC-BY-SA-4.0",
+      "domain": "01_SECURITY_STANDARDS",
+      "concepts_used": [
+        "test categories",
+        "evidence expectations",
+        "test methodology"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OWASP-CHEATSHEETSERIES",
+      "repo": "OWASP_CheatSheetSeries",
+      "url": "https://github.com/OWASP/CheatSheetSeries.git",
+      "commit": "c04039adbe6f727a2198b3a3ea634fec98ac068a",
+      "license": "CC-BY-SA-4.0",
+      "domain": "01_SECURITY_STANDARDS",
+      "concepts_used": [
+        "defensive patterns",
+        "implementation guidance"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OWASP-API-SECURITY",
+      "repo": "OWASP_API_Security",
+      "url": "https://github.com/OWASP/API-Security.git",
+      "commit": "33cea37b2ffde3e2e62f6b5d79a029a22a846633",
+      "license": "CC-BY-SA-4.0",
+      "domain": "01_SECURITY_STANDARDS",
+      "concepts_used": [
+        "API threat categories",
+        "API security controls"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OWASP-SAMM-CORE",
+      "repo": "OWASP_SAMM_Core",
+      "url": "https://github.com/owaspsamm/core.git",
+      "commit": "bc2b5474ab248effbc357c389bec372b0f5e200f",
+      "license": "CC-BY-SA-4.0",
+      "domain": "01_SECURITY_STANDARDS",
+      "concepts_used": [
+        "maturity model",
+        "governance",
+        "measurement"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-SLSA",
+      "repo": "SLSA",
+      "url": "https://github.com/slsa-framework/slsa.git",
+      "commit": "618f5b2192aad8417a8ee8ccb9e3f27d05c0e9b6",
+      "license": "Community Specification License 1.0",
+      "domain": "01_SECURITY_STANDARDS",
+      "concepts_used": [
+        "provenance",
+        "source/build levels",
+        "attestations"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OPENSSF-SCORECARD",
+      "repo": "OpenSSF_Scorecard",
+      "url": "https://github.com/ossf/scorecard.git",
+      "commit": "f92023a3f77879f96e0c9c1305f289d755be4bb6",
+      "license": "Apache-2.0",
+      "domain": "01_SECURITY_STANDARDS",
+      "concepts_used": [
+        "automated checks",
+        "risk signals",
+        "structured score evidence"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-SEMGREP",
+      "repo": "Semgrep",
+      "url": "https://github.com/semgrep/semgrep.git",
+      "commit": "56e04ee9581f76a2a1cfcdd806dd2d276851a39f",
+      "license": "LGPL-2.1",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "rule architecture",
+        "location",
+        "severity",
+        "confidence"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-TRIVY",
+      "repo": "Trivy",
+      "url": "https://github.com/aquasecurity/trivy.git",
+      "commit": "ae561f8cca36b4b11434b0a6d171b39ec1ad871e",
+      "license": "Apache-2.0",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "normalized findings",
+        "SBOM",
+        "vulnerability evidence",
+        "misconfiguration"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-GITLEAKS",
+      "repo": "Gitleaks",
+      "url": "https://github.com/gitleaks/gitleaks.git",
+      "commit": "b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b",
+      "license": "MIT",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "fingerprints",
+        "baselines",
+        "suppression",
+        "secret findings"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-TRUFFLEHOG",
+      "repo": "TruffleHog",
+      "url": "https://github.com/trufflesecurity/trufflehog.git",
+      "commit": "88524578ce32e1a8521c29dd38af9d9200ff92cc",
+      "license": "AGPL-3.0",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "secret verification",
+        "confidence",
+        "detectors"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OSV-SCANNER",
+      "repo": "OSV_Scanner",
+      "url": "https://github.com/google/osv-scanner.git",
+      "commit": "f0e28d3623dc9e451003c424dde7ac03430a1147",
+      "license": "Apache-2.0",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "package identity",
+        "vulnerability matching",
+        "advisory evidence"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-CHECKOV",
+      "repo": "Checkov",
+      "url": "https://github.com/bridgecrewio/checkov.git",
+      "commit": "92ca0101e39e7f575c8182b5b1fd7c89b04e136b",
+      "license": "Apache-2.0",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "policy checks",
+        "IaC evidence",
+        "resource locations"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-PROWLER",
+      "repo": "Prowler",
+      "url": "https://github.com/prowler-cloud/prowler.git",
+      "commit": "c2b80924618a555e3151dfb1699feb874e1ec74c",
+      "license": "Apache-2.0",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "cloud checks",
+        "severity",
+        "resource evidence"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OWASP-ZAP",
+      "repo": "OWASP_ZAP",
+      "url": "https://github.com/zaproxy/zaproxy.git",
+      "commit": "281526d47d9c22be1e5e6f78d0612b4662a4fc0e",
+      "license": "Apache-2.0",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "web security automation",
+        "passive/active testing separation"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-NUCLEI",
+      "repo": "Nuclei",
+      "url": "https://github.com/projectdiscovery/nuclei.git",
+      "commit": "c5611b9ac4c553c220129eb100e7bfbd32e5adb8",
+      "license": "MIT",
+      "domain": "02_SECURITY_TOOLS",
+      "concepts_used": [
+        "template checks",
+        "matcher evidence",
+        "deduplication"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-SYFT",
+      "repo": "Syft",
+      "url": "https://github.com/anchore/syft.git",
+      "commit": "643bf2c24d5acf9e898e1f9d9db8bb39d3ab3528",
+      "license": "Apache-2.0",
+      "domain": "03_SUPPLY_CHAIN",
+      "concepts_used": [
+        "SBOM",
+        "dependency inventory",
+        "package coordinates"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-GRYPE",
+      "repo": "Grype",
+      "url": "https://github.com/anchore/grype.git",
+      "commit": "c24afc3a5e23b6961682c27187dc0b5f199dc120",
+      "license": "Apache-2.0",
+      "domain": "03_SUPPLY_CHAIN",
+      "concepts_used": [
+        "vulnerability correlation",
+        "severity",
+        "fix versions"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-CYCLONEDX-CLI",
+      "repo": "CycloneDX_CLI",
+      "url": "https://github.com/CycloneDX/cyclonedx-cli.git",
+      "commit": "b3cfa4b0edc356dad07e0b6e7ab6da0a94af0246",
+      "license": "Apache-2.0",
+      "domain": "03_SUPPLY_CHAIN",
+      "concepts_used": [
+        "SBOM schema",
+        "component relationships"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-SPDX-SPEC",
+      "repo": "SPDX_Spec",
+      "url": "https://github.com/spdx/spdx-spec.git",
+      "commit": "b0f290ffdb31b5682ff90bd99636d1d29e79d3b2",
+      "license": "Community Specification License 1.0 + historical CC-BY/MIT notices",
+      "domain": "03_SUPPLY_CHAIN",
+      "concepts_used": [
+        "license identifiers",
+        "SBOM exchange",
+        "package metadata"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-SPDX-TOOLS-JAVA",
+      "repo": "SPDX_Tools_Java",
+      "url": "https://github.com/spdx/tools-java.git",
+      "commit": "69fced5ada33d762edd45806073d0de218719fbd",
+      "license": "Apache-2.0",
+      "domain": "03_SUPPLY_CHAIN",
+      "concepts_used": [
+        "validation",
+        "normalization",
+        "document processing"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-RENOVATE",
+      "repo": "Renovate",
+      "url": "https://github.com/renovatebot/renovate.git",
+      "commit": "e02925fe97f9b376a015030f3a6a1da2591e59cd",
+      "license": "AGPL-3.0",
+      "domain": "03_SUPPLY_CHAIN",
+      "concepts_used": [
+        "dependency freshness",
+        "update policy",
+        "maintenance health"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-PLAYWRIGHT",
+      "repo": "Playwright",
+      "url": "https://github.com/microsoft/playwright.git",
+      "commit": "b9a34ac7783a1b6c2e1dfff0c08ac744c048fa59",
+      "license": "Apache-2.0",
+      "domain": "04_QA_WEB_PERF_A11Y",
+      "concepts_used": [
+        "browser evidence",
+        "repeatable scenarios",
+        "E2E regression"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-LIGHTHOUSE",
+      "repo": "Lighthouse",
+      "url": "https://github.com/GoogleChrome/lighthouse.git",
+      "commit": "08c05cdee7e191719480477056bd145abcb09c17",
+      "license": "Apache-2.0",
+      "domain": "04_QA_WEB_PERF_A11Y",
+      "concepts_used": [
+        "audit categories",
+        "performance metrics",
+        "structured scores"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-LIGHTHOUSE-CI",
+      "repo": "Lighthouse_CI",
+      "url": "https://github.com/GoogleChrome/lighthouse-ci.git",
+      "commit": "ebee453dad3f8acacd657a62ccc65e3296afb7d0",
+      "license": "Apache-2.0",
+      "domain": "04_QA_WEB_PERF_A11Y",
+      "concepts_used": [
+        "budgets",
+        "thresholds",
+        "regression gates"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-AXE-CORE",
+      "repo": "axe_core",
+      "url": "https://github.com/dequelabs/axe-core.git",
+      "commit": "eb854ed3e7498f1c1c6bd941b44181455a8e4866",
+      "license": "MPL-2.0",
+      "domain": "04_QA_WEB_PERF_A11Y",
+      "concepts_used": [
+        "rule IDs",
+        "impact",
+        "nodes",
+        "manual/incomplete states"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-PA11Y",
+      "repo": "Pa11y",
+      "url": "https://github.com/pa11y/pa11y.git",
+      "commit": "920ad865270220336cee3186ff664aec8ddbc094",
+      "license": "LGPL-3.0",
+      "domain": "04_QA_WEB_PERF_A11Y",
+      "concepts_used": [
+        "accessibility automation",
+        "CI reporting"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-K6",
+      "repo": "k6",
+      "url": "https://github.com/grafana/k6.git",
+      "commit": "20394f8f3736ed6672c43a930cbc3bb49fb19ba6",
+      "license": "AGPL-3.0",
+      "domain": "04_QA_WEB_PERF_A11Y",
+      "concepts_used": [
+        "performance scenarios",
+        "thresholds",
+        "repeat runs"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-STRYKER-JS",
+      "repo": "Stryker_JS",
+      "url": "https://github.com/stryker-mutator/stryker-js.git",
+      "commit": "f2a49ff02437e3b7fe2682dba808ac93039895bf",
+      "license": "Apache-2.0",
+      "domain": "04_QA_WEB_PERF_A11Y",
+      "concepts_used": [
+        "mutation score",
+        "test quality evidence"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OPENAPI-SPECIFICATION",
+      "repo": "OpenAPI_Specification",
+      "url": "https://github.com/OAI/OpenAPI-Specification.git",
+      "commit": "447c479c9c7136918e80a57a258fd6c84f369c7c",
+      "license": "Apache-2.0",
+      "domain": "05_API_CONTRACTS",
+      "concepts_used": [
+        "schema contracts",
+        "breaking changes",
+        "response conformance"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-ASYNCAPI-SPEC",
+      "repo": "AsyncAPI_Spec",
+      "url": "https://github.com/asyncapi/spec.git",
+      "commit": "1dd65fd2c1ed13f06365c1e870c61cdc82d8a981",
+      "license": "Apache-2.0",
+      "domain": "05_API_CONTRACTS",
+      "concepts_used": [
+        "event contracts",
+        "channels/messages",
+        "schema governance"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-SPECTRAL",
+      "repo": "Spectral",
+      "url": "https://github.com/stoplightio/spectral.git",
+      "commit": "cee53a30948b95e2bc1df4e1e8615f73e70ad997",
+      "license": "Apache-2.0",
+      "domain": "05_API_CONTRACTS",
+      "concepts_used": [
+        "lint rules",
+        "rulesets",
+        "structured diagnostics"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-SCHEMATHESIS",
+      "repo": "Schemathesis",
+      "url": "https://github.com/schemathesis/schemathesis.git",
+      "commit": "7d5ab38ea4588e59e0559a19a2f455243758bce7",
+      "license": "MIT",
+      "domain": "05_API_CONTRACTS",
+      "concepts_used": [
+        "property-based API tests",
+        "stateful workflows",
+        "schema conformance"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-PACT-JS",
+      "repo": "Pact_JS",
+      "url": "https://github.com/pact-foundation/pact-js.git",
+      "commit": "3dafb9cf4b385cda3ae5681a3f3c0011e04f2a03",
+      "license": "MIT",
+      "domain": "05_API_CONTRACTS",
+      "concepts_used": [
+        "consumer/provider contracts",
+        "contract failure evidence"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OPENFGA",
+      "repo": "OpenFGA",
+      "url": "https://github.com/openfga/openfga.git",
+      "commit": "b74685e115e65f52655ed6866818d5a0d985805a",
+      "license": "Apache-2.0",
+      "domain": "06_AUTHORIZATION",
+      "concepts_used": [
+        "subject-resource-relation",
+        "ReBAC",
+        "decision tests"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-CERBOS",
+      "repo": "Cerbos",
+      "url": "https://github.com/cerbos/cerbos.git",
+      "commit": "84348489c34ccba12fc37111f0fa3b3b2abbe5d3",
+      "license": "Apache-2.0",
+      "domain": "06_AUTHORIZATION",
+      "concepts_used": [
+        "policy decision",
+        "deny/allow",
+        "explanation",
+        "test matrix"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OPENTELEMETRY-COLLECTOR",
+      "repo": "OpenTelemetry_Collector",
+      "url": "https://github.com/open-telemetry/opentelemetry-collector.git",
+      "commit": "3580e28a9386c3971db4f2bee9cde5cd500a57a4",
+      "license": "Apache-2.0",
+      "domain": "07_OBSERVABILITY_SRE",
+      "concepts_used": [
+        "telemetry pipelines",
+        "receivers/processors/exporters"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OPENTELEMETRY-SPECIFICATION",
+      "repo": "OpenTelemetry_Specification",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification.git",
+      "commit": "cac5b81ebcfdecb272bb4e2d31f885b7142207d9",
+      "license": "Apache-2.0",
+      "domain": "07_OBSERVABILITY_SRE",
+      "concepts_used": [
+        "metrics",
+        "logs",
+        "traces",
+        "semantic conventions"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-PROMETHEUS",
+      "repo": "Prometheus",
+      "url": "https://github.com/prometheus/prometheus.git",
+      "commit": "ea954809ceafceb53ecfa295ab0947753929de9e",
+      "license": "Apache-2.0",
+      "domain": "07_OBSERVABILITY_SRE",
+      "concepts_used": [
+        "metrics",
+        "SLIs",
+        "alert rules"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-ALERTMANAGER",
+      "repo": "Alertmanager",
+      "url": "https://github.com/prometheus/alertmanager.git",
+      "commit": "6a7967995e910f6cf0400295a742a38675d2011d",
+      "license": "Apache-2.0",
+      "domain": "07_OBSERVABILITY_SRE",
+      "concepts_used": [
+        "alert grouping",
+        "routing",
+        "silencing"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OPENSLO",
+      "repo": "OpenSLO",
+      "url": "https://github.com/OpenSLO/OpenSLO.git",
+      "commit": "e0259752f252276485cfa2708dac2db00c2f3464",
+      "license": "Apache-2.0",
+      "domain": "07_OBSERVABILITY_SRE",
+      "concepts_used": [
+        "SLI",
+        "SLO",
+        "window",
+        "error budget"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-POSTHOG-FOSS",
+      "repo": "PostHog_FOSS",
+      "url": "https://github.com/PostHog/posthog-foss.git",
+      "commit": "902753541480c170ea8d36b6939c08838fa2053e",
+      "license": "MIT",
+      "domain": "08_PRODUCT_ANALYTICS",
+      "concepts_used": [
+        "events",
+        "funnels",
+        "retention",
+        "cohorts",
+        "feature usage"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-GROWTHBOOK",
+      "repo": "GrowthBook",
+      "url": "https://github.com/growthbook/growthbook.git",
+      "commit": "e613b6149809c71f5155f6af6cd92a437b447c01",
+      "license": "MIT core + GrowthBook Enterprise License scoped directories",
+      "domain": "08_PRODUCT_ANALYTICS",
+      "concepts_used": [
+        "experiments",
+        "feature flags",
+        "guardrails",
+        "rollouts"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-OPENFEATURE-SPEC",
+      "repo": "OpenFeature_Spec",
+      "url": "https://github.com/open-feature/spec.git",
+      "commit": "c9cdba22265f2cb70fed82ddc25fe873292a1663",
+      "license": "Apache-2.0",
+      "domain": "08_PRODUCT_ANALYTICS",
+      "concepts_used": [
+        "vendor-neutral flag contract",
+        "evaluation context"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-UMAMI",
+      "repo": "Umami",
+      "url": "https://github.com/umami-software/umami.git",
+      "commit": "ec0ff50388c264ed8ce46f00967e92f7e71476ae",
+      "license": "MIT",
+      "domain": "08_PRODUCT_ANALYTICS",
+      "concepts_used": [
+        "events",
+        "sessions",
+        "goals",
+        "privacy"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-FORMBRICKS",
+      "repo": "Formbricks",
+      "url": "https://github.com/formbricks/formbricks.git",
+      "commit": "bfe7933cb2882c99f2196aa6a46edd104cd7fbb8",
+      "license": "AGPL-3.0 + enterprise-licensed directories",
+      "domain": "08_PRODUCT_ANALYTICS",
+      "concepts_used": [
+        "survey lifecycle",
+        "segmentation",
+        "targeting",
+        "feedback categorization"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-PLAUSIBLE-DOCS",
+      "repo": "Plausible_Docs",
+      "url": "https://github.com/plausible/docs.git",
+      "commit": "3d6668325e5a1dbaceec964ad6eacd3a9a13347d",
+      "license": "CC-BY-SA-4.0",
+      "domain": "08_PRODUCT_ANALYTICS",
+      "concepts_used": [
+        "goals",
+        "UTM",
+        "privacy analytics"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-ARC42-TEMPLATE",
+      "repo": "arc42_Template",
+      "url": "https://github.com/arc42/arc42-template.git",
+      "commit": "29ca619d93a366780a2d727bef393c46911ba49e",
+      "license": "CC-BY-SA-4.0",
+      "domain": "09_ARCHITECTURE_GOVERNANCE",
+      "concepts_used": [
+        "context",
+        "constraints",
+        "quality requirements",
+        "risks"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-ARCHITECTURE-DECISION-RECORD",
+      "repo": "Architecture_Decision_Record",
+      "url": "https://github.com/architecture-decision-record/architecture-decision-record.git",
+      "commit": "464354b7d94901916542f64eb8b62dc9048a6486",
+      "license": "CC-BY-NC-SA-4.0 + third-party material",
+      "domain": "09_ARCHITECTURE_GOVERNANCE",
+      "concepts_used": [
+        "decision",
+        "alternatives",
+        "consequences",
+        "status"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-N8N",
+      "repo": "n8n",
+      "url": "https://github.com/n8n-io/n8n.git",
+      "commit": "c1463d0e764456b80337c98d124a80d8ed92b3a0",
+      "license": "Sustainable Use License + Enterprise License",
+      "domain": "10_REFERENCE_PRODUCTS",
+      "concepts_used": [
+        "workflow graphs",
+        "execution history",
+        "extension patterns"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-TWENTY",
+      "repo": "Twenty",
+      "url": "https://github.com/twentyhq/twenty.git",
+      "commit": "19bb8009e0b43f10e9ab801b9cd84b04fefe168b",
+      "license": "AGPL-3.0 + commercial-licensed files",
+      "domain": "10_REFERENCE_PRODUCTS",
+      "concepts_used": [
+        "records",
+        "views",
+        "permissions",
+        "activity history"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-GRAFANA",
+      "repo": "Grafana",
+      "url": "https://github.com/grafana/grafana.git",
+      "commit": "92b769afc5390e6278de73b81118c55c3b72853c",
+      "license": "AGPL-3.0",
+      "domain": "11_HEAVY_REFERENCES",
+      "concepts_used": [
+        "dashboards",
+        "operational views",
+        "alert visualization"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-SENTRY",
+      "repo": "Sentry",
+      "url": "https://github.com/getsentry/sentry.git",
+      "commit": "0f24ade94f8dd0bda07c126fec2b6f8d332cf3c7",
+      "license": "FSL-1.1-Apache-2.0",
+      "domain": "11_HEAVY_REFERENCES",
+      "concepts_used": [
+        "error grouping",
+        "release health",
+        "issue triage"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-BACKSTAGE",
+      "repo": "Backstage",
+      "url": "https://github.com/backstage/backstage.git",
+      "commit": "43e352aa5b2c1f5d739f8267389602fca1ecaf2c",
+      "license": "Apache-2.0",
+      "domain": "11_HEAVY_REFERENCES",
+      "concepts_used": [
+        "service ownership",
+        "catalog",
+        "developer platform governance"
+      ],
+      "code_copied": false,
+      "notes": "Static research corpus snapshot; code reuse not implied."
+    },
+    {
+      "id": "REF-WCAG-2-2",
+      "repo": "W3C WCAG",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "commit": null,
+      "license": "W3C document terms",
+      "domain": "accessibility",
+      "concepts_used": [
+        "testable success criteria",
+        "A/AA/AAA",
+        "manual vs automated coverage"
+      ],
+      "code_copied": false,
+      "notes": "Current W3C Recommendation; external reference checked 2026-09-26."
+    },
+    {
+      "id": "REF-CORE-WEB-VITALS",
+      "repo": "web.dev Core Web Vitals",
+      "url": "https://web.dev/articles/vitals",
+      "commit": null,
+      "license": "documentation reference",
+      "domain": "performance",
+      "concepts_used": [
+        "LCP",
+        "INP",
+        "CLS",
+        "75th percentile"
+      ],
+      "code_copied": false,
+      "notes": "Thresholds are external references and must be revalidated when used."
+    },
+    {
+      "id": "REF-OPENAPI-CURRENT",
+      "repo": "OpenAPI Specification",
+      "url": "https://spec.openapis.org/oas/",
+      "commit": null,
+      "license": "specification reference",
+      "domain": "api",
+      "concepts_used": [
+        "contract versioning",
+        "reference safety",
+        "schema iteration"
+      ],
+      "code_copied": false,
+      "notes": "Current specification listing checked 2026-09-26."
+    }
+  ]
+}

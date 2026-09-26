@@ -1,0 +1,202 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "security",
+  "controls": [
+    {
+      "id": "BR360-SEC-001",
+      "title": "Security requirements are mapped to applicable controls",
+      "domain": "security",
+      "description": "Map project risks to stable security control IDs rather than generic claims.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Map project risks to stable security control IDs rather than generic claims."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Security requirements are mapped to applicable controls?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Security requirements are mapped to applicable controls\" for the applicable scope; the review/test addresses this check: Map project risks to stable security control IDs rather than generic claims; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Security requirements are mapped to applicable controls\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Map project risks to stable security control IDs rather than generic claims.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Security requirements are mapped to applicable controls\", the required capability is materially absent, or the check cannot be demonstrated after review: Map project risks to stable security control IDs rather than generic claims.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OWASP-ASVS",
+        "REF-OWASP-WSTG",
+        "REF-OWASP-API-SECURITY",
+        "REF-OWASP-CHEATSHEETSERIES",
+        "REF-OPENSSF-SCORECARD"
+      ]
+    },
+    {
+      "id": "BR360-SEC-002",
+      "title": "Secrets and credentials are absent from distributable source",
+      "domain": "security",
+      "description": "Scan source/history when authorized and normalize secret findings.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "CRITICAL",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.secret_scan"
+      ],
+      "checks": [
+        "Scan source/history when authorized and normalize secret findings."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Secrets and credentials are absent from distributable source?"
+      ],
+      "pass_condition": "The built-in high-confidence secret scan completes without findings.",
+      "partial_condition": "The scan is incomplete or a lower-confidence/manual-review condition remains.",
+      "fail_condition": "One or more high-confidence secret candidates are detected in the inspected source surface.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OWASP-ASVS",
+        "REF-OWASP-WSTG",
+        "REF-OWASP-API-SECURITY",
+        "REF-OWASP-CHEATSHEETSERIES",
+        "REF-OPENSSF-SCORECARD"
+      ]
+    },
+    {
+      "id": "BR360-SEC-003",
+      "title": "Input validation and output handling address injection classes",
+      "domain": "security",
+      "description": "Inspect validation boundaries and relevant defensive tests.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Inspect validation boundaries and relevant defensive tests."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Input validation and output handling address injection classes?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Input validation and output handling address injection classes\" for the applicable scope; the review/test addresses this check: Inspect validation boundaries and relevant defensive tests; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Input validation and output handling address injection classes\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Inspect validation boundaries and relevant defensive tests.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Input validation and output handling address injection classes\", the required capability is materially absent, or the check cannot be demonstrated after review: Inspect validation boundaries and relevant defensive tests.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OWASP-ASVS",
+        "REF-OWASP-WSTG",
+        "REF-OWASP-API-SECURITY",
+        "REF-OWASP-CHEATSHEETSERIES",
+        "REF-OPENSSF-SCORECARD"
+      ]
+    },
+    {
+      "id": "BR360-SEC-004",
+      "title": "Authentication and session controls match exposure and risk",
+      "domain": "security",
+      "description": "Verify session, token, MFA/re-auth and logout behaviors where applicable.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Verify session, token, MFA/re-auth and logout behaviors where applicable."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Authentication and session controls match exposure and risk?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Authentication and session controls match exposure and risk\" for the applicable scope; the review/test addresses this check: Verify session, token, MFA/re-auth and logout behaviors where applicable; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Authentication and session controls match exposure and risk\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Verify session, token, MFA/re-auth and logout behaviors where applicable.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Authentication and session controls match exposure and risk\", the required capability is materially absent, or the check cannot be demonstrated after review: Verify session, token, MFA/re-auth and logout behaviors where applicable.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OWASP-ASVS",
+        "REF-OWASP-WSTG",
+        "REF-OWASP-API-SECURITY",
+        "REF-OWASP-CHEATSHEETSERIES",
+        "REF-OPENSSF-SCORECARD"
+      ]
+    },
+    {
+      "id": "BR360-SEC-005",
+      "title": "Security headers/configuration are production-safe",
+      "domain": "security",
+      "description": "Inspect security-sensitive deployment/runtime configuration.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.security_headers"
+      ],
+      "checks": [
+        "Inspect security-sensitive deployment/runtime configuration."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Security headers/configuration are production-safe?"
+      ],
+      "pass_condition": "At least three major production security-header controls are explicitly configured.",
+      "partial_condition": "One or two major security-header controls are explicitly configured.",
+      "fail_condition": "A web/production surface is present and no recognized production security-header configuration is found.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OWASP-ASVS",
+        "REF-OWASP-WSTG",
+        "REF-OWASP-API-SECURITY",
+        "REF-OWASP-CHEATSHEETSERIES",
+        "REF-OPENSSF-SCORECARD"
+      ]
+    },
+    {
+      "id": "BR360-SEC-006",
+      "title": "Threat model or abuse-case analysis exists for material risks",
+      "domain": "security",
+      "description": "Record threats, assets, trust boundaries and abuse cases.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Record threats, assets, trust boundaries and abuse cases."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Threat model or abuse-case analysis exists for material risks?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Threat model or abuse-case analysis exists for material risks\" for the applicable scope; the review/test addresses this check: Record threats, assets, trust boundaries and abuse cases; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Threat model or abuse-case analysis exists for material risks\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Record threats, assets, trust boundaries and abuse cases.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Threat model or abuse-case analysis exists for material risks\", the required capability is materially absent, or the check cannot be demonstrated after review: Record threats, assets, trust boundaries and abuse cases.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OWASP-ASVS",
+        "REF-OWASP-WSTG",
+        "REF-OWASP-API-SECURITY",
+        "REF-OWASP-CHEATSHEETSERIES",
+        "REF-OPENSSF-SCORECARD"
+      ]
+    }
+  ]
+}

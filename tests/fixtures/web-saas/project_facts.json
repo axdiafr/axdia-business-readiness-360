@@ -1,0 +1,14 @@
+{
+  "facts": [
+    "language.javascript",
+    "has_web_ui",
+    "has_human_ui",
+    "has_api",
+    "has_auth",
+    "has_billing",
+    "has_database",
+    "production_service",
+    "commercial_product",
+    "multi_tenant"
+  ]
+}

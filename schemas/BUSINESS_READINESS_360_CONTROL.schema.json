@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "BUSINESS_READINESS_360_CONTROL.schema.json",
+  "title": "BR360 Control",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "domain",
+    "description",
+    "applicability",
+    "severity_default",
+    "evidence_required",
+    "automation",
+    "detectors",
+    "checks",
+    "manual_questions",
+    "pass_condition",
+    "partial_condition",
+    "fail_condition",
+    "not_applicable_condition",
+    "references"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^BR360-[A-Z0-9]+-[0-9]{3}$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "applicability": {
+      "type": "object"
+    },
+    "severity_default": {
+      "enum": [
+        "INFO",
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ]
+    },
+    "evidence_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "automation": {
+      "enum": [
+        "AUTOMATED",
+        "SEMI_AUTOMATED",
+        "MANUAL",
+        "REAL_WORLD_REQUIRED",
+        "EXTERNAL_RESEARCH",
+        "LEGAL_REVIEW"
+      ]
+    },
+    "detectors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "manual_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pass_condition": {
+      "type": "string"
+    },
+    "partial_condition": {
+      "type": "string"
+    },
+    "fail_condition": {
+      "type": "string"
+    },
+    "not_applicable_condition": {
+      "type": "string"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

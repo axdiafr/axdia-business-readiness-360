@@ -1,0 +1,22 @@
+name: Profile request
+description: Propose a project archetype/profile BR360 should understand
+title: "[Profile]: "
+labels: ["profile"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Profile / project type
+      placeholder: "B2B SaaS with mobile client"
+    validations:
+      required: true
+  - type: textarea
+    id: facts
+    attributes:
+      label: Detection signals and relevant domains
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Controls that should become required/recommended/not applicable

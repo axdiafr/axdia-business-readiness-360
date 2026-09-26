@@ -1,0 +1,163 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "resilience",
+  "controls": [
+    {
+      "id": "BR360-RES-001",
+      "title": "Timeouts and retry policies are bounded",
+      "domain": "resilience",
+      "description": "Inspect outbound/runtime retry and timeout configuration.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.resilience_bounds"
+      ],
+      "checks": [
+        "Inspect outbound/runtime retry and timeout configuration."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Timeouts and retry policies are bounded?"
+      ],
+      "pass_condition": "Explicit bounded timeout and retry/attempt configuration signals are both present.",
+      "partial_condition": "Only timeout or retry/attempt bounds are explicit.",
+      "fail_condition": "A backend/API surface has no bounded timeout/retry evidence, or retry behavior appears unbounded.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RES-002",
+      "title": "Dependency failures have graceful degradation or explicit failure modes",
+      "domain": "resilience",
+      "description": "Exercise representative dependency loss.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Exercise representative dependency loss."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Dependency failures have graceful degradation or explicit failure modes?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Dependency failures have graceful degradation or explicit failure modes\" for the applicable scope; the review/test addresses this check: Exercise representative dependency loss; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Dependency failures have graceful degradation or explicit failure modes\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Exercise representative dependency loss.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Dependency failures have graceful degradation or explicit failure modes\", the required capability is materially absent, or the check cannot be demonstrated after review: Exercise representative dependency loss.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RES-003",
+      "title": "Backup and disaster recovery objectives are explicit",
+      "domain": "resilience",
+      "description": "Define RPO/RTO only where meaningful.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Define RPO/RTO only where meaningful."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Backup and disaster recovery objectives are explicit?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Backup and disaster recovery objectives are explicit\" for the applicable scope; the review/test addresses this check: Define RPO/RTO only where meaningful; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Backup and disaster recovery objectives are explicit\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Define RPO/RTO only where meaningful.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Backup and disaster recovery objectives are explicit\", the required capability is materially absent, or the check cannot be demonstrated after review: Define RPO/RTO only where meaningful.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RES-004",
+      "title": "Recovery procedures are tested periodically",
+      "domain": "resilience",
+      "description": "Require actual recovery exercise evidence for critical systems.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "CRITICAL",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Require actual recovery exercise evidence for critical systems."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Recovery procedures are tested periodically?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Recovery procedures are tested periodically\" for the applicable scope; the review/test addresses this check: Require actual recovery exercise evidence for critical systems; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Recovery procedures are tested periodically\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require actual recovery exercise evidence for critical systems.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Recovery procedures are tested periodically\", the required capability is materially absent, or the check cannot be demonstrated after review: Require actual recovery exercise evidence for critical systems.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RES-005",
+      "title": "Third-party failure and lock-in risks have mitigations",
+      "domain": "resilience",
+      "description": "Record exit/fallback strategy for critical vendors.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Record exit/fallback strategy for critical vendors."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Third-party failure and lock-in risks have mitigations?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Third-party failure and lock-in risks have mitigations\" for the applicable scope; the review/test addresses this check: Record exit/fallback strategy for critical vendors; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Third-party failure and lock-in risks have mitigations\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Record exit/fallback strategy for critical vendors.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Third-party failure and lock-in risks have mitigations\", the required capability is materially absent, or the check cannot be demonstrated after review: Record exit/fallback strategy for critical vendors.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "product",
+  "controls": [
+    {
+      "id": "BR360-PROD-001",
+      "title": "Problem, target user and job-to-be-done are explicit",
+      "domain": "product",
+      "description": "Verify problem statement, target segment, JTBD and non-goals.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Verify problem statement, target segment, JTBD and non-goals."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Problem, target user and job-to-be-done are explicit?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Problem, target user and job-to-be-done are explicit\" for the applicable scope; the review/test addresses this check: Verify problem statement, target segment, JTBD and non-goals; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Problem, target user and job-to-be-done are explicit\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Verify problem statement, target segment, JTBD and non-goals.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Problem, target user and job-to-be-done are explicit\", the required capability is materially absent, or the check cannot be demonstrated after review: Verify problem statement, target segment, JTBD and non-goals.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-FORMBRICKS",
+        "REF-TWENTY"
+      ]
+    },
+    {
+      "id": "BR360-PROD-002",
+      "title": "Primary user journey reaches a concrete value outcome",
+      "domain": "product",
+      "description": "Trace and, when possible, execute the primary journey end-to-end.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Trace and, when possible, execute the primary journey end-to-end."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Primary user journey reaches a concrete value outcome?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Primary user journey reaches a concrete value outcome\" for the applicable scope; the review/test addresses this check: Trace and, when possible, execute the primary journey end-to-end; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Primary user journey reaches a concrete value outcome\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Trace and, when possible, execute the primary journey end-to-end.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Primary user journey reaches a concrete value outcome\", the required capability is materially absent, or the check cannot be demonstrated after review: Trace and, when possible, execute the primary journey end-to-end.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-FORMBRICKS",
+        "REF-TWENTY"
+      ]
+    },
+    {
+      "id": "BR360-PROD-003",
+      "title": "Activation event is defined and measurable",
+      "domain": "product",
+      "description": "Confirm an activation event and a reliable measurement path.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Confirm an activation event and a reliable measurement path."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Activation event is defined and measurable?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Activation event is defined and measurable\" for the applicable scope; the review/test addresses this check: Confirm an activation event and a reliable measurement path; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Activation event is defined and measurable\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Confirm an activation event and a reliable measurement path.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Activation event is defined and measurable\", the required capability is materially absent, or the check cannot be demonstrated after review: Confirm an activation event and a reliable measurement path.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-FORMBRICKS",
+        "REF-TWENTY"
+      ]
+    },
+    {
+      "id": "BR360-PROD-004",
+      "title": "Feature scope has pruning/kill criteria",
+      "domain": "product",
+      "description": "Check for explicit non-goals, kill criteria or pruning decisions.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Check for explicit non-goals, kill criteria or pruning decisions."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Feature scope has pruning/kill criteria?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Feature scope has pruning/kill criteria\" for the applicable scope; the review/test addresses this check: Check for explicit non-goals, kill criteria or pruning decisions; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Feature scope has pruning/kill criteria\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check for explicit non-goals, kill criteria or pruning decisions.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Feature scope has pruning/kill criteria\", the required capability is materially absent, or the check cannot be demonstrated after review: Check for explicit non-goals, kill criteria or pruning decisions.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-FORMBRICKS",
+        "REF-TWENTY"
+      ]
+    },
+    {
+      "id": "BR360-PROD-005",
+      "title": "Product feedback loop exists",
+      "domain": "product",
+      "description": "Require a real channel from user feedback to categorized product decisions.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "USER_EVIDENCE"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Require a real channel from user feedback to categorized product decisions."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Product feedback loop exists?"
+      ],
+      "pass_condition": "PASS when USER_EVIDENCE evidence directly demonstrates \"Product feedback loop exists\" for the applicable scope; the review/test addresses this check: Require a real channel from user feedback to categorized product decisions; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Product feedback loop exists\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require a real channel from user feedback to categorized product decisions.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Product feedback loop exists\", the required capability is materially absent, or the check cannot be demonstrated after review: Require a real channel from user feedback to categorized product decisions.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-FORMBRICKS",
+        "REF-TWENTY"
+      ]
+    }
+  ]
+}

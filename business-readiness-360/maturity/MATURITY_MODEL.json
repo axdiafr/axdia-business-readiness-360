@@ -1,0 +1,38 @@
+{
+  "schema": "BR360-MATURITY-3",
+  "levels": [
+    {
+      "level": 0,
+      "name": "ABSENT"
+    },
+    {
+      "level": 1,
+      "name": "AD_HOC"
+    },
+    {
+      "level": 2,
+      "name": "REPEATABLE"
+    },
+    {
+      "level": 3,
+      "name": "DEFINED"
+    },
+    {
+      "level": 4,
+      "name": "MEASURED"
+    },
+    {
+      "level": 5,
+      "name": "OPTIMIZED"
+    }
+  ],
+  "note": "Maturity is computed separately from readiness score and is constrained by coverage/verification gates.",
+  "algorithm": {
+    "0_ABSENT": "readiness < 2 and coverage < 0.15 (default when no evaluated evidence)",
+    "1_AD_HOC": "readiness > 0 or coverage >= 0.15",
+    "2_REPEATABLE": "readiness >= 4 and coverage >= 0.40",
+    "3_DEFINED": "readiness >= 6 and coverage >= 0.60",
+    "4_MEASURED": "readiness >= 7.5, verification >= 6, coverage >= 0.80",
+    "5_OPTIMIZED": "readiness >= 9, verification >= 8, coverage >= 0.90 and real-world evidence >= 8 when real-world controls apply"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "licensing",
+  "controls": [
+    {
+      "id": "BR360-LIC-001",
+      "title": "Project license and distribution terms are explicit",
+      "domain": "licensing",
+      "description": "Detect license files and distribution constraints.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.license_metadata"
+      ],
+      "checks": [
+        "Detect license files and distribution constraints."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Project license and distribution terms are explicit?"
+      ],
+      "pass_condition": "A LICENSE/COPYING/NOTICE file or explicit package license metadata is present.",
+      "partial_condition": "Distribution terms are referenced but not represented by a recognized license artifact/metadata field.",
+      "fail_condition": "No explicit license/distribution metadata is present in the inspected source tree.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-LIC-002",
+      "title": "Third-party license inventory is available",
+      "domain": "licensing",
+      "description": "Generate or inspect dependency license inventory.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "EVIDENCE"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Generate or inspect dependency license inventory."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Third-party license inventory is available?"
+      ],
+      "pass_condition": "PASS when EVIDENCE evidence directly demonstrates \"Third-party license inventory is available\" for the applicable scope; the review/test addresses this check: Generate or inspect dependency license inventory; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Third-party license inventory is available\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Generate or inspect dependency license inventory.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Third-party license inventory is available\", the required capability is materially absent, or the check cannot be demonstrated after review: Generate or inspect dependency license inventory.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-LIC-003",
+      "title": "Required notices/attribution are tracked",
+      "domain": "licensing",
+      "description": "Ensure redistribution obligations have an owner.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Ensure redistribution obligations have an owner."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Required notices/attribution are tracked?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Required notices/attribution are tracked\" for the applicable scope; the review/test addresses this check: Ensure redistribution obligations have an owner; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Required notices/attribution are tracked\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Ensure redistribution obligations have an owner.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Required notices/attribution are tracked\", the required capability is materially absent, or the check cannot be demonstrated after review: Ensure redistribution obligations have an owner.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-LIC-004",
+      "title": "Copyleft/share-alike/commercial boundaries are reviewed before reuse",
+      "domain": "licensing",
+      "description": "Block silent code copying across incompatible terms.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "LEGAL_REVIEW",
+      "detectors": [],
+      "checks": [
+        "Block silent code copying across incompatible terms."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Copyleft/share-alike/commercial boundaries are reviewed before reuse?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Copyleft/share-alike/commercial boundaries are reviewed before reuse\" for the applicable scope; the review/test addresses this check: Block silent code copying across incompatible terms; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Copyleft/share-alike/commercial boundaries are reviewed before reuse\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Block silent code copying across incompatible terms.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Copyleft/share-alike/commercial boundaries are reviewed before reuse\", the required capability is materially absent, or the check cannot be demonstrated after review: Block silent code copying across incompatible terms.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-LIC-005",
+      "title": "Open-source and proprietary scopes are explicit in mixed-license projects",
+      "domain": "licensing",
+      "description": "Track path/file-level licensing boundaries.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Track path/file-level licensing boundaries."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Open-source and proprietary scopes are explicit in mixed-license projects?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Open-source and proprietary scopes are explicit in mixed-license projects\" for the applicable scope; the review/test addresses this check: Track path/file-level licensing boundaries; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Open-source and proprietary scopes are explicit in mixed-license projects\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Track path/file-level licensing boundaries.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Open-source and proprietary scopes are explicit in mixed-license projects\", the required capability is materially absent, or the check cannot be demonstrated after review: Track path/file-level licensing boundaries.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

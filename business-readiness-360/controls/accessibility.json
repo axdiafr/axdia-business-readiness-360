@@ -1,0 +1,168 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "accessibility",
+  "controls": [
+    {
+      "id": "BR360-A11Y-001",
+      "title": "Accessibility target and applicable standard are declared",
+      "domain": "accessibility",
+      "description": "Declare applicable WCAG/RGAA or equivalent target and scope.",
+      "applicability": {
+        "facts_any": [
+          "has_human_ui"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Declare applicable WCAG/RGAA or equivalent target and scope."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Accessibility target and applicable standard are declared?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Accessibility target and applicable standard are declared\" for the applicable scope; the review/test addresses this check: Declare applicable WCAG/RGAA or equivalent target and scope; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Accessibility target and applicable standard are declared\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Declare applicable WCAG/RGAA or equivalent target and scope.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Accessibility target and applicable standard are declared\", the required capability is materially absent, or the check cannot be demonstrated after review: Declare applicable WCAG/RGAA or equivalent target and scope.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-AXE-CORE",
+        "REF-PA11Y"
+      ]
+    },
+    {
+      "id": "BR360-A11Y-002",
+      "title": "Automated accessibility scan has no unresolved high-impact issues",
+      "domain": "accessibility",
+      "description": "Normalize axe/Pa11y findings when adapter is available.",
+      "applicability": {
+        "facts_any": [
+          "has_human_ui"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.a11y_scan_evidence"
+      ],
+      "checks": [
+        "Normalize axe/Pa11y findings when adapter is available."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Automated accessibility scan has no unresolved high-impact issues?"
+      ],
+      "pass_condition": "Accessibility result artifacts are present and contain no serious/critical violation signals.",
+      "partial_condition": "Accessibility tooling exists but no suitable result artifact is available for verification.",
+      "fail_condition": "The UI surface has no recognized accessibility automation evidence, or result artifacts contain serious/critical violation signals.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-AXE-CORE",
+        "REF-PA11Y"
+      ]
+    },
+    {
+      "id": "BR360-A11Y-003",
+      "title": "Keyboard focus and visible focus are verified",
+      "domain": "accessibility",
+      "description": "Test keyboard-only navigation and focus visibility.",
+      "applicability": {
+        "facts_any": [
+          "has_human_ui"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Test keyboard-only navigation and focus visibility."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Keyboard focus and visible focus are verified?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Keyboard focus and visible focus are verified\" for the applicable scope; the review/test addresses this check: Test keyboard-only navigation and focus visibility; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Keyboard focus and visible focus are verified\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Test keyboard-only navigation and focus visibility.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Keyboard focus and visible focus are verified\", the required capability is materially absent, or the check cannot be demonstrated after review: Test keyboard-only navigation and focus visibility.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-AXE-CORE",
+        "REF-PA11Y"
+      ]
+    },
+    {
+      "id": "BR360-A11Y-004",
+      "title": "Forms and interactive controls have accessible names and errors",
+      "domain": "accessibility",
+      "description": "Check labels, names, roles, states and error associations.",
+      "applicability": {
+        "facts_any": [
+          "has_human_ui"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Check labels, names, roles, states and error associations."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Forms and interactive controls have accessible names and errors?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Forms and interactive controls have accessible names and errors\" for the applicable scope; the review/test addresses this check: Check labels, names, roles, states and error associations; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Forms and interactive controls have accessible names and errors\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Check labels, names, roles, states and error associations.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Forms and interactive controls have accessible names and errors\", the required capability is materially absent, or the check cannot be demonstrated after review: Check labels, names, roles, states and error associations.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-AXE-CORE",
+        "REF-PA11Y"
+      ]
+    },
+    {
+      "id": "BR360-A11Y-005",
+      "title": "Manual accessibility review covers non-automatable criteria",
+      "domain": "accessibility",
+      "description": "Record manual checks and distinguish MANUAL_REQUIRED from PASS.",
+      "applicability": {
+        "facts_any": [
+          "has_human_ui"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "USER_EVIDENCE"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Record manual checks and distinguish MANUAL_REQUIRED from PASS."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Manual accessibility review covers non-automatable criteria?"
+      ],
+      "pass_condition": "PASS when USER_EVIDENCE evidence directly demonstrates \"Manual accessibility review covers non-automatable criteria\" for the applicable scope; the review/test addresses this check: Record manual checks and distinguish MANUAL_REQUIRED from PASS; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Manual accessibility review covers non-automatable criteria\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Record manual checks and distinguish MANUAL_REQUIRED from PASS.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Manual accessibility review covers non-automatable criteria\", the required capability is materially absent, or the check cannot be demonstrated after review: Record manual checks and distinguish MANUAL_REQUIRED from PASS.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-AXE-CORE",
+        "REF-PA11Y"
+      ]
+    }
+  ]
+}

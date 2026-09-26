@@ -1,0 +1,178 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "authorization",
+  "controls": [
+    {
+      "id": "BR360-AUTHZ-001",
+      "title": "Authorization model defines subject, resource and action/relation",
+      "domain": "authorization",
+      "description": "Document RBAC/ABAC/ReBAC semantics and deny-by-default posture.",
+      "applicability": {
+        "facts_any": [
+          "has_auth",
+          "multi_tenant",
+          "has_entitlements"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Document RBAC/ABAC/ReBAC semantics and deny-by-default posture."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Authorization model defines subject, resource and action/relation?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Authorization model defines subject, resource and action/relation\" for the applicable scope; the review/test addresses this check: Document RBAC/ABAC/ReBAC semantics and deny-by-default posture; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Authorization model defines subject, resource and action/relation\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Document RBAC/ABAC/ReBAC semantics and deny-by-default posture.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Authorization model defines subject, resource and action/relation\", the required capability is materially absent, or the check cannot be demonstrated after review: Document RBAC/ABAC/ReBAC semantics and deny-by-default posture.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENFGA",
+        "REF-CERBOS"
+      ]
+    },
+    {
+      "id": "BR360-AUTHZ-002",
+      "title": "Tenant isolation is tested with negative cross-tenant cases",
+      "domain": "authorization",
+      "description": "Require real multi-tenant negative tests when multi-tenant applies.",
+      "applicability": {
+        "facts_any": [
+          "has_auth",
+          "multi_tenant",
+          "has_entitlements"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "CRITICAL",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Require real multi-tenant negative tests when multi-tenant applies."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Tenant isolation is tested with negative cross-tenant cases?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Tenant isolation is tested with negative cross-tenant cases\" for the applicable scope; the review/test addresses this check: Require real multi-tenant negative tests when multi-tenant applies; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Tenant isolation is tested with negative cross-tenant cases\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require real multi-tenant negative tests when multi-tenant applies.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Tenant isolation is tested with negative cross-tenant cases\", the required capability is materially absent, or the check cannot be demonstrated after review: Require real multi-tenant negative tests when multi-tenant applies.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENFGA",
+        "REF-CERBOS"
+      ]
+    },
+    {
+      "id": "BR360-AUTHZ-003",
+      "title": "Authorization decisions have deterministic tests",
+      "domain": "authorization",
+      "description": "Maintain allow/deny matrix and policy regression tests.",
+      "applicability": {
+        "facts_any": [
+          "has_auth",
+          "multi_tenant",
+          "has_entitlements"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.authz_tests"
+      ],
+      "checks": [
+        "Maintain allow/deny matrix and policy regression tests."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Authorization decisions have deterministic tests?"
+      ],
+      "pass_condition": "Authorization-related deterministic test source is present.",
+      "partial_condition": "Authorization evidence exists but test coverage is incomplete.",
+      "fail_condition": "Authorization/authentication behavior is present but deterministic authorization tests are not located.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENFGA",
+        "REF-CERBOS"
+      ]
+    },
+    {
+      "id": "BR360-AUTHZ-004",
+      "title": "Entitlements are separated from authentication",
+      "domain": "authorization",
+      "description": "Verify product/plan entitlements cannot be inferred solely from identity.",
+      "applicability": {
+        "facts_any": [
+          "has_auth",
+          "multi_tenant",
+          "has_entitlements"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Verify product/plan entitlements cannot be inferred solely from identity."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Entitlements are separated from authentication?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Entitlements are separated from authentication\" for the applicable scope; the review/test addresses this check: Verify product/plan entitlements cannot be inferred solely from identity; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Entitlements are separated from authentication\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Verify product/plan entitlements cannot be inferred solely from identity.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Entitlements are separated from authentication\", the required capability is materially absent, or the check cannot be demonstrated after review: Verify product/plan entitlements cannot be inferred solely from identity.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENFGA",
+        "REF-CERBOS"
+      ]
+    },
+    {
+      "id": "BR360-AUTHZ-005",
+      "title": "Privileged actions require explicit authorization evidence",
+      "domain": "authorization",
+      "description": "Test admin/owner/member boundaries and sensitive transitions.",
+      "applicability": {
+        "facts_any": [
+          "has_auth",
+          "multi_tenant",
+          "has_entitlements"
+        ],
+        "default": "NOT_APPLICABLE"
+      },
+      "severity_default": "CRITICAL",
+      "evidence_required": [
+        "TEST_RESULT"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Test admin/owner/member boundaries and sensitive transitions."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Privileged actions require explicit authorization evidence?"
+      ],
+      "pass_condition": "PASS when TEST_RESULT evidence directly demonstrates \"Privileged actions require explicit authorization evidence\" for the applicable scope; the review/test addresses this check: Test admin/owner/member boundaries and sensitive transitions; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Privileged actions require explicit authorization evidence\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Test admin/owner/member boundaries and sensitive transitions.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Privileged actions require explicit authorization evidence\", the required capability is materially absent, or the check cannot be demonstrated after review: Test admin/owner/member boundaries and sensitive transitions.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-OPENFGA",
+        "REF-CERBOS"
+      ]
+    }
+  ]
+}

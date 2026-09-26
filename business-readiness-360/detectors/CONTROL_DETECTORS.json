@@ -1,0 +1,200 @@
+{
+  "schema": "BR360-CONTROL-DETECTORS-3",
+  "detectors": [
+    {
+      "id": "builtin.a11y_scan_evidence",
+      "control_id": "BR360-A11Y-002",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "Accessibility result artifacts are present and contain no serious/critical violation signals.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.ai_inventory",
+      "control_id": "BR360-AI-001",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "AI provider/model references and AI data-flow/privacy documentation signals are both present.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.api_contract",
+      "control_id": "BR360-API-001",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "A recognizable OpenAPI, Swagger, or AsyncAPI machine-readable contract exists.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.api_breaking_baseline",
+      "control_id": "BR360-API-004",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "Breaking-change tooling/config and an API baseline artifact are both present.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.arch_ownership",
+      "control_id": "BR360-ARCH-004",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "Ownership metadata and dependency/architecture boundary evidence are both explicit.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.authz_tests",
+      "control_id": "BR360-AUTHZ-003",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "Authorization-related deterministic test source is present.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.data_schema",
+      "control_id": "BR360-DATA-001",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "Schema/model/migration artifacts and explicit invariant/validation signals are both present.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.license_metadata",
+      "control_id": "BR360-LIC-001",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "A LICENSE/COPYING/NOTICE file or explicit package license metadata is present.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.performance_baseline",
+      "control_id": "BR360-PERF-004",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "Performance tooling/config and a recognizable baseline/budget artifact are both present.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.resilience_bounds",
+      "control_id": "BR360-RES-001",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "Explicit bounded timeout and retry/attempt configuration signals are both present.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.environment_config",
+      "control_id": "BR360-RUN-001",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "An explicit environment template exists for a production/backend surface and no suspicious committed secret assignment is detected.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.production_debug",
+      "control_id": "BR360-RUN-004",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "Explicit production/debug-off configuration exists and no debug-on pattern is detected.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.dependency_inventory",
+      "control_id": "BR360-SC-001",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "A recognized dependency manifest and lock/integrity file are both present.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.secret_scan",
+      "control_id": "BR360-SEC-002",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "The built-in high-confidence secret scan completes without findings.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    },
+    {
+      "id": "builtin.security_headers",
+      "control_id": "BR360-SEC-005",
+      "runtime": "python-stdlib",
+      "mode": "READ_ONLY",
+      "network_required": false,
+      "conservative_pass": true,
+      "description": "At least three major production security-header controls are explicitly configured.",
+      "limitations": [
+        "Static/project-local evidence only unless the detector explicitly emits E2_TESTED.",
+        "A PASS does not replace runtime or real-world evidence required by other controls."
+      ]
+    }
+  ]
+}

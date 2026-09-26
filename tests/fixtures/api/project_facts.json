@@ -1,0 +1,8 @@
+{
+  "facts": [
+    "has_api",
+    "has_auth",
+    "has_database",
+    "production_service"
+  ]
+}

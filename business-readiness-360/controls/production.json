@@ -1,0 +1,165 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "production",
+  "controls": [
+    {
+      "id": "BR360-RUN-001",
+      "title": "Environment configuration is explicit and secret-safe",
+      "domain": "production",
+      "description": "Check production config boundaries and secret indirection.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.environment_config"
+      ],
+      "checks": [
+        "Check production config boundaries and secret indirection."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Environment configuration is explicit and secret-safe?"
+      ],
+      "pass_condition": "An explicit environment template exists for a production/backend surface and no suspicious committed secret assignment is detected.",
+      "partial_condition": "Some environment/deployment configuration exists but the production boundary is incomplete.",
+      "fail_condition": "Potential secret-bearing environment configuration is committed, or no explicit environment/deployment configuration is present.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RUN-002",
+      "title": "Health and readiness checks reflect real dependencies",
+      "domain": "production",
+      "description": "Differentiate process health from dependency readiness.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "RUNTIME"
+      ],
+      "automation": "SEMI_AUTOMATED",
+      "detectors": [],
+      "checks": [
+        "Differentiate process health from dependency readiness."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Health and readiness checks reflect real dependencies?"
+      ],
+      "pass_condition": "PASS when RUNTIME evidence directly demonstrates \"Health and readiness checks reflect real dependencies\" for the applicable scope; the review/test addresses this check: Differentiate process health from dependency readiness; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Health and readiness checks reflect real dependencies\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Differentiate process health from dependency readiness.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Health and readiness checks reflect real dependencies\", the required capability is materially absent, or the check cannot be demonstrated after review: Differentiate process health from dependency readiness.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RUN-003",
+      "title": "Deployment has rollback or safe-forward recovery",
+      "domain": "production",
+      "description": "Document and test recovery path for failed releases.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Document and test recovery path for failed releases."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Deployment has rollback or safe-forward recovery?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Deployment has rollback or safe-forward recovery\" for the applicable scope; the review/test addresses this check: Document and test recovery path for failed releases; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Deployment has rollback or safe-forward recovery\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Document and test recovery path for failed releases.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Deployment has rollback or safe-forward recovery\", the required capability is materially absent, or the check cannot be demonstrated after review: Document and test recovery path for failed releases.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RUN-004",
+      "title": "Debug/development behavior is disabled in production",
+      "domain": "production",
+      "description": "Inspect flags, origins, verbose errors and dev-only endpoints.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.production_debug"
+      ],
+      "checks": [
+        "Inspect flags, origins, verbose errors and dev-only endpoints."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Debug/development behavior is disabled in production?"
+      ],
+      "pass_condition": "Explicit production/debug-off configuration exists and no debug-on pattern is detected.",
+      "partial_condition": "No debug-on pattern is detected but an explicit production-mode assertion is missing.",
+      "fail_condition": "A production-relevant configuration contains an obvious debug/development enablement pattern.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RUN-005",
+      "title": "Operational runbook covers common failures",
+      "domain": "production",
+      "description": "Provide diagnosis, mitigation, escalation and recovery steps.",
+      "applicability": {
+        "facts_any": [
+          "production_service",
+          "has_backend",
+          "has_api"
+        ],
+        "default": "OPTIONAL"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Provide diagnosis, mitigation, escalation and recovery steps."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Operational runbook covers common failures?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Operational runbook covers common failures\" for the applicable scope; the review/test addresses this check: Provide diagnosis, mitigation, escalation and recovery steps; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Operational runbook covers common failures\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Provide diagnosis, mitigation, escalation and recovery steps.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Operational runbook covers common failures\", the required capability is materially absent, or the check cannot be demonstrated after review: Provide diagnosis, mitigation, escalation and recovery steps.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

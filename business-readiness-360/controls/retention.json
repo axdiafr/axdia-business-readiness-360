@@ -1,0 +1,161 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "retention",
+  "controls": [
+    {
+      "id": "BR360-RET-001",
+      "title": "Cohort retention is measured for recurring-use products",
+      "domain": "retention",
+      "description": "Use cohort evidence appropriate to usage cadence.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Use cohort evidence appropriate to usage cadence."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Cohort retention is measured for recurring-use products?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Cohort retention is measured for recurring-use products\" for the applicable scope; the review/test addresses this check: Use cohort evidence appropriate to usage cadence; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Cohort retention is measured for recurring-use products\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Use cohort evidence appropriate to usage cadence.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Cohort retention is measured for recurring-use products\", the required capability is materially absent, or the check cannot be demonstrated after review: Use cohort evidence appropriate to usage cadence.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RET-002",
+      "title": "Churn/cancellation or abandonment reasons are categorized",
+      "domain": "retention",
+      "description": "Collect structured reasons where lifecycle applies.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "USER_EVIDENCE"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Collect structured reasons where lifecycle applies."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Churn/cancellation or abandonment reasons are categorized?"
+      ],
+      "pass_condition": "PASS when USER_EVIDENCE evidence directly demonstrates \"Churn/cancellation or abandonment reasons are categorized\" for the applicable scope; the review/test addresses this check: Collect structured reasons where lifecycle applies; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Churn/cancellation or abandonment reasons are categorized\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Collect structured reasons where lifecycle applies.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Churn/cancellation or abandonment reasons are categorized\", the required capability is materially absent, or the check cannot be demonstrated after review: Collect structured reasons where lifecycle applies.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RET-003",
+      "title": "Repeat use is distinguished from account existence",
+      "domain": "retention",
+      "description": "Measure meaningful repeat behavior, not registrations.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Measure meaningful repeat behavior, not registrations."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Repeat use is distinguished from account existence?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Repeat use is distinguished from account existence\" for the applicable scope; the review/test addresses this check: Measure meaningful repeat behavior, not registrations; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Repeat use is distinguished from account existence\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Measure meaningful repeat behavior, not registrations.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Repeat use is distinguished from account existence\", the required capability is materially absent, or the check cannot be demonstrated after review: Measure meaningful repeat behavior, not registrations.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RET-004",
+      "title": "Support/friction signals feed retention decisions",
+      "domain": "retention",
+      "description": "Correlate support burden and recurring friction.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "USER_EVIDENCE"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Correlate support burden and recurring friction."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Support/friction signals feed retention decisions?"
+      ],
+      "pass_condition": "PASS when USER_EVIDENCE evidence directly demonstrates \"Support/friction signals feed retention decisions\" for the applicable scope; the review/test addresses this check: Correlate support burden and recurring friction; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Support/friction signals feed retention decisions\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Correlate support burden and recurring friction.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Support/friction signals feed retention decisions\", the required capability is materially absent, or the check cannot be demonstrated after review: Correlate support burden and recurring friction.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    },
+    {
+      "id": "BR360-RET-005",
+      "title": "Renewal/continued value evidence exists for paid recurring offers",
+      "domain": "retention",
+      "description": "Require renewal or equivalent continued-value evidence.",
+      "applicability": {
+        "facts_any": [
+          "commercial_product",
+          "internal_product",
+          "open_source"
+        ],
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "HIGH",
+      "evidence_required": [
+        "BUSINESS_METRIC"
+      ],
+      "automation": "REAL_WORLD_REQUIRED",
+      "detectors": [],
+      "checks": [
+        "Require renewal or equivalent continued-value evidence."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Renewal/continued value evidence exists for paid recurring offers?"
+      ],
+      "pass_condition": "PASS when BUSINESS_METRIC evidence directly demonstrates \"Renewal/continued value evidence exists for paid recurring offers\" for the applicable scope; the review/test addresses this check: Require renewal or equivalent continued-value evidence; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Renewal/continued value evidence exists for paid recurring offers\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require renewal or equivalent continued-value evidence.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Renewal/continued value evidence exists for paid recurring offers\", the required capability is materially absent, or the check cannot be demonstrated after review: Require renewal or equivalent continued-value evidence.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": []
+    }
+  ]
+}

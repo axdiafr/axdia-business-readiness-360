@@ -1,0 +1,7 @@
+{
+  "facts": [
+    "has_cli",
+    "language.python",
+    "open_source"
+  ]
+}

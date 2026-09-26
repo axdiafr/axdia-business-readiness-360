@@ -1,0 +1,158 @@
+{
+  "schema": "BR360-CONTROLS-3",
+  "domain": "architecture",
+  "controls": [
+    {
+      "id": "BR360-ARCH-001",
+      "title": "System context and major boundaries are documented",
+      "domain": "architecture",
+      "description": "Document actors, systems and trust boundaries.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Document actors, systems and trust boundaries."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: System context and major boundaries are documented?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"System context and major boundaries are documented\" for the applicable scope; the review/test addresses this check: Document actors, systems and trust boundaries; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"System context and major boundaries are documented\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Document actors, systems and trust boundaries.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"System context and major boundaries are documented\", the required capability is materially absent, or the check cannot be demonstrated after review: Document actors, systems and trust boundaries.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD",
+        "REF-BACKSTAGE"
+      ]
+    },
+    {
+      "id": "BR360-ARCH-002",
+      "title": "Quality attributes and constraints drive architecture decisions",
+      "domain": "architecture",
+      "description": "Tie decisions to measurable quality requirements.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Tie decisions to measurable quality requirements."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Quality attributes and constraints drive architecture decisions?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Quality attributes and constraints drive architecture decisions\" for the applicable scope; the review/test addresses this check: Tie decisions to measurable quality requirements; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Quality attributes and constraints drive architecture decisions\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Tie decisions to measurable quality requirements.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Quality attributes and constraints drive architecture decisions\", the required capability is materially absent, or the check cannot be demonstrated after review: Tie decisions to measurable quality requirements.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD",
+        "REF-BACKSTAGE"
+      ]
+    },
+    {
+      "id": "BR360-ARCH-003",
+      "title": "Architecture decisions record alternatives and consequences",
+      "domain": "architecture",
+      "description": "Require decision traceability rather than final-state diagrams only.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "LOW",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Require decision traceability rather than final-state diagrams only."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Architecture decisions record alternatives and consequences?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Architecture decisions record alternatives and consequences\" for the applicable scope; the review/test addresses this check: Require decision traceability rather than final-state diagrams only; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Architecture decisions record alternatives and consequences\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Require decision traceability rather than final-state diagrams only.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Architecture decisions record alternatives and consequences\", the required capability is materially absent, or the check cannot be demonstrated after review: Require decision traceability rather than final-state diagrams only.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD",
+        "REF-BACKSTAGE"
+      ]
+    },
+    {
+      "id": "BR360-ARCH-004",
+      "title": "Critical dependencies and ownership boundaries are explicit",
+      "domain": "architecture",
+      "description": "Detect major services/packages and map owners/interfaces.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "CONFIG"
+      ],
+      "automation": "AUTOMATED",
+      "detectors": [
+        "builtin.arch_ownership"
+      ],
+      "checks": [
+        "Detect major services/packages and map owners/interfaces."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Critical dependencies and ownership boundaries are explicit?"
+      ],
+      "pass_condition": "Ownership metadata and dependency/architecture boundary evidence are both explicit.",
+      "partial_condition": "Only ownership or dependency/architecture boundary evidence is explicit.",
+      "fail_condition": "No ownership metadata, recognized dependency manifest, or architecture boundary documentation is found.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD",
+        "REF-BACKSTAGE"
+      ]
+    },
+    {
+      "id": "BR360-ARCH-005",
+      "title": "Architectural risks and debt are visible in backlog/governance",
+      "domain": "architecture",
+      "description": "Track known risks with owner and decision horizon.",
+      "applicability": {
+        "default": "RECOMMENDED"
+      },
+      "severity_default": "MEDIUM",
+      "evidence_required": [
+        "DOCUMENTATION"
+      ],
+      "automation": "MANUAL",
+      "detectors": [],
+      "checks": [
+        "Track known risks with owner and decision horizon."
+      ],
+      "manual_questions": [
+        "What concrete evidence supports: Architectural risks and debt are visible in backlog/governance?"
+      ],
+      "pass_condition": "PASS when DOCUMENTATION evidence directly demonstrates \"Architectural risks and debt are visible in backlog/governance\" for the applicable scope; the review/test addresses this check: Track known risks with owner and decision horizon; and no material contradictory evidence remains.",
+      "partial_condition": "PARTIAL when evidence for \"Architectural risks and debt are visible in backlog/governance\" exists but is incomplete in scope, freshness, execution, or authority, or when the required check is only partly demonstrated: Track known risks with owner and decision horizon.",
+      "fail_condition": "FAIL when applicable evidence contradicts \"Architectural risks and debt are visible in backlog/governance\", the required capability is materially absent, or the check cannot be demonstrated after review: Track known risks with owner and decision horizon.",
+      "not_applicable_condition": "Applicability engine records NOT_APPLICABLE with an explicit reason.",
+      "references": [
+        "REF-ARC42-TEMPLATE",
+        "REF-ARCHITECTURE-DECISION-RECORD",
+        "REF-BACKSTAGE"
+      ]
+    }
+  ]
+}

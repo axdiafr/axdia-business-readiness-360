@@ -1,0 +1,33 @@
+AXDIA BUSINESS READINESS 360 V3 — BUILD REPORT
+Date: 2026-09-26
+Version: 3.0.0
+Schema: BR360-3
+
+V3 objective: convert the V2 framework from pre-analysis/scoring architecture into an executable read-only audit engine.
+
+Implemented:
+- 125 controls / 24 domains / 20 profiles preserved.
+- 15/15 AUTOMATED controls wired to executable built-in detectors.
+- Per-control automated PASS/PARTIAL/FAIL logic.
+- Evaluations, evidence, findings, actions, blockers, confidence, evidence strength and maturity.
+- Evidence import for manual/runtime/real-world proof.
+- CLI audit / preanalyse / compare / adapters / selftest.
+- Adapter discovery for 11 tools; explicit opt-in execution path for supported local-safe adapters.
+- V2 helper API compatibility and V2 snapshot.
+
+Safety:
+- read-only project inspection;
+- no dependency installation;
+- no commit/push/deploy;
+- no automatic network execution;
+- no fabricated PASS from missing evidence.
+
+Quality command:
+python3 -m unittest discover -s tests -v
+python3 runtime/br360_engine.py selftest
+
+Final local quality gate:
+- Unit/regression tests: 29/29 PASS
+- ResourceWarning gate: PASS
+- BR360 selftest: PASS
+- Result JSON Schema validation: PASS

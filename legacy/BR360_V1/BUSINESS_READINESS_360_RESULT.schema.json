@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Business Readiness 360 Result",
+  "type": "object",
+  "required": [
+    "schema",
+    "audit",
+    "project_profile",
+    "applicability",
+    "scores",
+    "final"
+  ],
+  "properties": {
+    "schema": {
+      "const": "BR360-1"
+    },
+    "audit": {
+      "type": "object"
+    },
+    "project_profile": {
+      "type": "object"
+    },
+    "applicability": {
+      "type": "object"
+    },
+    "evidence_summary": {
+      "type": "object"
+    },
+    "scores": {
+      "type": "object"
+    },
+    "modules": {
+      "type": "array"
+    },
+    "risks": {
+      "type": "array"
+    },
+    "business": {
+      "type": "object"
+    },
+    "operations": {
+      "type": "object"
+    },
+    "security": {
+      "type": "object"
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "ai": {
+      "type": "object"
+    },
+    "data": {
+      "type": "object"
+    },
+    "analytics": {
+      "type": "object"
+    },
+    "competition": {
+      "type": "array"
+    },
+    "blockers_to_8": {
+      "type": "array"
+    },
+    "blockers_to_9": {
+      "type": "array"
+    },
+    "blockers_to_10": {
+      "type": "array"
+    },
+    "actions": {
+      "type": "array"
+    },
+    "not_to_build": {
+      "type": "array"
+    },
+    "experiments": {
+      "type": "array"
+    },
+    "missing_evidence": {
+      "type": "array"
+    },
+    "final": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "BR360-EVIDENCE-GRAPH-3",
+  "chain": [
+    "Requirement",
+    "Detector",
+    "Check",
+    "Observation",
+    "Evidence",
+    "Evaluation",
+    "Finding",
+    "Score",
+    "Decision",
+    "Action"
+  ],
+  "evidence_levels": [
+    "E0_CLAIM_ONLY",
+    "E1_STATIC",
+    "E2_TESTED",
+    "E3_RUNTIME",
+    "E4_REAL_WORLD"
+  ],
+  "conflict_policy": "NEVER_PICK_SILENTLY",
+  "conflict_type": "EVIDENCE_CONFLICT",
+  "required_conflict_fields": [
+    "source_a",
+    "source_b",
+    "freshness",
+    "authority",
+    "confidence",
+    "decision"
+  ],
+  "coverage_metrics": [
+    "AUTOMATED_COVERAGE",
+    "MANUAL_COVERAGE",
+    "REAL_WORLD_EVIDENCE_COVERAGE"
+  ],
+  "legacy_chain_v2": [
+    "Requirement",
+    "Detector",
+    "Check",
+    "Observation",
+    "Finding",
+    "Evidence",
+    "Score",
+    "Decision",
+    "Action"
+  ],
+  "execution_principle": "Evidence is normalized before evaluation/finding; missing evidence never becomes PASS."
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "BUSINESS_READINESS_360_PROFILE.schema.json",
+  "title": "BR360 Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "included_domains",
+    "excluded_domains",
+    "weight_overrides",
+    "required_evidence",
+    "runtime_checks",
+    "external_research_policy"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "included_domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "excluded_domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "weight_overrides": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "required_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "runtime_checks": {
+      "type": "boolean"
+    },
+    "external_research_policy": {
+      "type": "string"
+    }
+  }
+}
